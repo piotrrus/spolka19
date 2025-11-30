@@ -1,0 +1,10 @@
+export const DATE_FORMAT_WITH_SPACES = 'YYYY MM DD';
+export const DATE_TIME_FORMAT = 'YYYY MM DD HH:mm';
+export const FULL_DATE = 'ddd MM DD YYYY';
+export const MONTH_YEAR_SHORT = 'YYYY-MMM';
+export const MONTH_YEAR = 'YYYY-MMMM';
+export const DATE_FORMAT = 'YYYY-MM-DD';
+export const DATE_FORMAT_PIPE = 'YYYY-MM-d';
+export const DAY_FORMAT = 'DD';
+export const DATE_TO_FILENAME = 'YYYY_MM_DD_HH_MM';
+export const DATE_DETAIL_TIME_FORMAT = 'YYYY-MM-DD, HH:mm:ss';
