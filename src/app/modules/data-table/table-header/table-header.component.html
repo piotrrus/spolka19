@@ -1,0 +1,17 @@
+<div class="row">
+    <div [ngClass]="!noadd ? 'col-sm-5' : 'col-sm-7'">
+        <h2 class="table-title">{{ title }}</h2>
+    </div>
+    <div class="col-sm-5">
+        @if (isFiltered) {
+        <app-simple-filter-form
+            (formChange)="onFormChange($event.searchedText)"
+        ></app-simple-filter-form>
+        }
+    </div>
+    <div class="col-sm-2 add-btn">
+        <a class="nav-link" *ngIf="!noadd">
+            <button mat-raised-button (click)="addNew()">Dodaj</button>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div [formGroup]="form.form">
+    <mat-form-field appearance="outline" class="filter-input">
+        <input matInput formControlName="searchedText" placeholder="Flitruj dane..." />
+        <mat-icon matSuffix class="clear" (click)="removeText()"></mat-icon>
+    </mat-form-field>
+</div>
