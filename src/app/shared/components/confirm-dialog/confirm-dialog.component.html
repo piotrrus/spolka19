@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<div mat-dialog-content>
+    @if (data.messageTxt) {
+    <p *ngIf="data.messageTxt">{{data.messageTxt}}</p>
+    } @if (data.continueTxt) {
+    <p *ngIf="data.continueTxt">{{data.continueTxt}}</p>
+    }
+</div>
+
+<div class="row modal-button-section confirm-modal">
+    <div class="col-lg-12">
+        <button mat-raised-button (click)="onConfirm()">Tak</button>
+        <button mat-raised-button class="btn-cancel" (click)="onDismiss()">Nie</button>
+    </div>
+</div>

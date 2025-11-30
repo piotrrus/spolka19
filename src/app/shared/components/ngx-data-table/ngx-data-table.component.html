@@ -1,0 +1,31 @@
+<app-table-header
+    [title]="tableTitle"
+    [noadd]="false"
+    (onAdd)="addElement($event)"
+    (onFilter)="updateFilter($event)"
+></app-table-header>
+
+<!-- [columnMode]="ColumnMode.force" -->
+
+<ngx-datatable
+    [columnMode]="'force'"
+    class="material"
+    [rows]="tableData"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+>
+    <ng-container *ngFor="let tableColumns of tableColumns; let i = index">
+        <ngx-datatable-column name="tableColumns.name" prop="tableColumns.prop">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+    </ng-container>
+
+    <!-- <ngx-datatable-column name="Dostawca" prop="name" [width]="50">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a href="javascript:void(0)" (click)="showDetails(row)" title="pokaż szczegóły"> {{ value }} </a>
+        </ng-template>
+    </ngx-datatable-column>
+ -->
+</ngx-datatable>
