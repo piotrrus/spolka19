@@ -1,0 +1,36 @@
+@use 'variables';
+
+.card {
+     background-color: #fff3;
+}
+
+.mat-drawer {
+     background-color: #4e5a71;
+}
+
+.mat-drawer-container {
+     background: #4e5a71;
+     color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-elevation-z2 {
+     padding: 2%;
+     color: #c0c0c0;
+     margin-bottom: 10px;
+}
+
+.mat-sidenav-content {
+     min-height: 650px;
+}
+
+.mat-mdc-dialog-actions {
+     justify-content: right !important;
+}
+
+mat-card {
+     margin-bottom: 25px;
+}
+
+.mat-mdc-card-header-text {
+     width: 100% !important;
+}

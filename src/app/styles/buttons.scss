@@ -1,0 +1,68 @@
+@use 'variables';
+
+.mat-mdc-raised-button,
+.mat-mdc-raised-button .mdc-button__ripple {
+     border-radius: 5px !important;
+     width: 140px !important;
+}
+
+.mat-mdc-mini-fab {
+     border-radius: 5px !important;
+     background-color: #5569dc !important;
+}
+
+.btn {
+     width: 130px;
+     margin-left: 15px;
+     &-cancel {
+          background-color: #dc497b !important;
+     }
+     &-lg {
+          width: 145px;
+          margin-left: 5px;
+          font-size: 12px;
+     }
+     &-success {
+          background-color: #28a7458a;
+          border-color: #00ff15;
+     }
+     &-primary {
+          background-color: #007bff54 !important; //
+     }
+     &-warning {
+          background-color: #ebc0526e;
+          border-color: #fecc0f;
+          color: #fff;
+     }
+     &-grey {
+          background-color: #e4e5e94a;
+          border-color: #c0c0c0;
+          color: #fff;
+     }
+}
+
+.btn-table-header {
+     float: right;
+     margin-top: 9px;
+     width: 110px;
+}
+
+.mat-btn-grey {
+     background-color: #3f4b7e7a;
+}
+
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+     background-color: #516676;
+     min-width: 140px;
+     margin-right: 10px;
+     font-size: 17px;
+     letter-spacing: 2px;
+}
+
+.mat-mdc-raised-button[disabled].mat-mdc-button-disabled,
+.mat-mdc-raised-button.mat-mdc-button-disabled.mat-mdc-button-disabled {
+     background: #6b84af6b !important;
+}

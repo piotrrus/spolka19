@@ -1,0 +1,176 @@
+@import 'variables';
+
+.table-link {
+     color: #ffc107;
+}
+
+:host ::ng-deep .datatable-body-cell {
+     padding: 0.5rem 0.2rem 0.5rem 0.2rem !important;
+}
+
+.ngx-datatable .datatable-header-cell-wrapper {
+     font-size: 14px;
+}
+
+::ng-deep .ngx-datatable.material .datatable-header .datatable-header-cell {
+     font-size: 16px !important;
+}
+
+::ng-deep .datatable-body-cell-label {
+     font-size: 14px;
+     margin-left: 10px !important;
+}
+
+::ng-deep .datatable-body-cell-label > .mat-mdc-button {
+     font-size: 14px;
+}
+
+.ngx-datatable.material .datatable-header .datatable-header-cell {
+     color: #162170; //#eba358;
+     font-size: 15px;
+     background-color: rgba(29, 32, 56, 0.26);
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+     color: #000; //#ceced1;
+}
+
+.ngx-datatable.material.striped .datatable-row-odd {
+     background: #eeeeee12;
+}
+
+.ngx-datatable.material .datatable-footer {
+     border-top: 1px solid #f8f9fa42;
+}
+
+.ngx-datatable.bootstrap:not(.cell-selection) .datatable-body-row:hover,
+.ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover .datatable-row-group {
+     background: #2b4e6c40;
+}
+
+.pager li {
+     font-size: 15px;
+}
+
+.ngx-datatable {
+     background: rgba(0, 0, 0, 0.04);
+     font-size: 15px;
+     color: $black;
+     z-index: 1;
+}
+.datatable {
+     &-header {
+          background: #2b4e6c40;
+          color: #eba358;
+          font-size: 15px;
+     }
+     &-body-cell {
+          &-label {
+               font-size: 13px;
+          }
+          text-align: left;
+          padding: 0.7rem 0.7rem;
+          vertical-align: top;
+          border-top: 0;
+          -webkit-transition: width 0.3s ease;
+          transition: width 0.3s ease;
+          font-size: 15px;
+          font-weight: 400;
+     }
+     &-header-cell {
+          &-label {
+               font-size: 15px;
+          }
+          color: #eba358;
+          text-align: left;
+          padding: 0.6rem 1.2rem;
+          font-weight: 400;
+          vertical-align: bottom;
+          font-size: 16px;
+          font-weight: 500;
+          background: #2b4e6c40;
+     }
+     &-body-row {
+          border-top: 1px solid #f8f9fa42;
+     }
+     &-footer {
+          border-top: 1px #fff;
+     }
+     &-pager {
+          margin: 0 10px;
+          vertical-align: top;
+     }
+}
+
+.ngx-datatable.dark .datatable-footer .datatable-pager ul li {
+     margin: 10px 0;
+}
+
+.ngx-datatable.material .datatable-footer .datatable-pager a {
+     color: #95989d;
+     z-index: auto;
+}
+
+.datatable-footer .datatable-pager ul li {
+     margin: 10px 0;
+}
+
+.mat-cell {
+     color: $white;
+     font-size: $table-font-size;
+}
+
+mat-row:nth-child(even) {
+     /* background-color:#737f94; */
+     background: #0000000a;
+}
+
+mat-row:nth-child(odd) {
+     // background: rgba(0, 0, 0, .06);
+     background: #b7c1e50d;
+}
+
+.mat-paginator-range-label,
+.mat-paginator-page-size {
+     font-size: 18px;
+}
+
+.mat-paginator {
+     /* background: #4e5a71; */
+     background: #0000000a;
+     color: $white;
+}
+
+.mat-paginator-icon {
+     fill: $white;
+}
+
+.mat-sort-header-button {
+     color: $white;
+}
+
+.mat-header-cell {
+     color: #eba358;
+     font-size: 17px;
+}
+
+.mat-header-row {
+     /* background: rgba(0, 0, 0, 0.12); */
+     /* background: rgba(85, 88, 109, 0.88); */
+     background: rgba(29, 32, 56, 0.26);
+}
+
+.mat-button {
+     font-size: $table-font-size;
+}
+
+.table-title {
+     padding-top: 15px;
+     padding-left: 20px;
+     color: #000;
+     font-size: 14px;
+}
+
+.page-count {
+     margin-left: 25px;
+}

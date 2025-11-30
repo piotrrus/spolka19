@@ -1,0 +1,73 @@
+body {
+     padding-right: 0px;
+     padding-left: 0px;
+     padding-bottom: 0px;
+     margin: 0px;
+     padding-top: 0px;
+     font-size: 9pt;
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+     background-color: #ffffff;
+}
+
+#templatemo_wrapper {
+     width: 1160px;
+     padding: 0 10px;
+     margin: 0 auto;
+     margin-top: 25px;
+}
+
+th {
+     background: #ffffff;
+     height: 30px;
+     border-bottom: 1px solid #cfd3d6;
+}
+
+tr {
+     font-size: 12px;
+}
+
+td {
+     font-size: 9pt;
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+table {
+     width: 1000px;
+     border-spacing: 0px;
+     border: 0px #000000 solid;
+}
+
+table.listax {
+     border-top: 1px solid #e5eff8;
+     border-right: 1px solid #e5eff8;
+     border-bottom: 1px solid #e5eff8;
+     border-left: 1px solid #e5eff8;
+     margin: 1em auto;
+     border-collapse: collapse;
+}
+
+td.listax {
+     color: #678197;
+     border-bottom: 1px solid #e5eff8;
+     border-left: 1px solid #e5eff8;
+     padding: 0.3em 1em;
+     text-align: center;
+}
+
+tr.listax {
+     background: #f4f9fe;
+     height: 30px;
+}
+
+div.stopka {
+     font-size: 10px;
+     font-family: Verdana;
+     color: #999999;
+     text-align: center;
+}
+
+hr.thin {
+     width: 1000px;
+     height: 1px;
+     size: 2px;
+}

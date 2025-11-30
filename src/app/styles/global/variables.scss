@@ -1,0 +1,468 @@
+/******************** Color names ********************/
+// Use http://chir.ag/projects/name-that-color to generate color names
+$black: #000000;
+$white: #ffffff;
+$monza: #d3003d;
+$stiletto: #a13248;
+$milano-red: #af0808;
+$disco: #951439;
+$malibu-0: #7bbefe;
+$malibu-1: #9fb5fc;
+$fun-blue: #1e58bc;
+$tulip-tree: #f0a445;
+$sandal: #aa886b;
+$cement: #987968;
+$alto-0: #d8d8d8;
+$alto-1: #dddddd;
+$alto-2: #dadada;
+$alto-3: #e0e0e0;
+$alto-4: #d4d3d3;
+$alto-5: #d6d6d6;
+$geyser: #d1dbe4;
+$pale-sky: #6d7584;
+$nevada: #6d7278;
+$slate-gray: #65738a;
+$rolling-stone: #7f8386;
+$rolling-stone2: #70757b;
+$green-vogue: #022c55;
+$shark-0: #252a31;
+$shark-1: #242930;
+$shark-2: #1e2125;
+$shark-3: #2b2b2c;
+$shark-4: #212529;
+$emperor: #505050;
+$woodsmoke: #131415;
+$bombay: #b1b4b9;
+$porcelain: #e7e9eb;
+$porcelain2: #f2f4f5;
+$porcelain-3: #f2f4f5;
+$river-bed: #475161;
+$aqua-haze: #f8fafb;
+$mine-shaft: #3f3f3f;
+$catalina-blue: #05327f;
+$prussian-blue: #002B56;
+$mantis: #71bb47;
+$eucalyptusapprox: #1ea350;
+$bright-green: #6dd400;
+$dusty-gray: #979797;
+//$fire-bush: #e4892c;
+$spring-leaves: #507f55;
+$locus: #aeb493;
+$chambray: #3d4d95;
+$tacao: #efbf82;
+$tundora-0: #494949;
+$tundora-1: #4d4d4d;
+$athens-gray: #e9ebee;
+$periwinkle-gray: #c8d4ec;
+$zircon: #f2f6ff;
+$denim: #1955bf;
+$grain-brown: #ddc8ad;
+$silver-sand: #c3c5c7;
+$spindle: #bfd7ea;
+$lynch: #64738b;
+$alabaster: #f9f9f9;
+$mine-shaft: #3b3b3b;
+$black-squeeze: #f3f8fb;
+$mercury: #e5e5e5;
+$header: #b4bdcc;
+$tuna: #30343a;
+$tuna2: #3f3f46;
+$tuna3: #31353b;
+$mexican-red: #9b2447;
+$silver: #cacaca;
+$athens-gray: #e7e9ed;
+$athens-gray2: #e0e3e8;
+$alabaster2: #fbfbfb;
+$zircon: #f0f5ff;
+$madison: #073059;
+$wild-sand: #f6f6f6;
+$geyser: #dadfe8;
+$shuttle-gray: #546073;
+$bright-sun: #fcc340;
+
+// New color scheme *new*
+$black: #000000;
+$white: #ffffff;
+$firefly: #0d1c2b;
+$firefly-1: #0c1d2c;
+$firefly-2: #0e1d2d;
+$tulip-tree: #eca03c;
+$carrot-orange: #ea882c;
+$fire-bush: #eb9627;
+$regal-blue: #004777;
+$alto-1: #dddddd;
+$alto-2: #dadada;
+$pale-sky: #6d7584;
+$dusty-gray: #979797;
+$slate-gray: #65738a;
+$shark-1: #242930;
+$silver: #bfbdbd;
+$sandal: #aa886b;
+$rolling-stone: #7f8386;
+$bombay: #b1b4b9;
+$nevada: #6d7278;
+$porcelain-3: #edeeef;
+$rolling-stone2: #70757b;
+$aqua-haze-1: #f0f4f7;
+$silver-sand: #c3c5c7;
+$tundora-0: #494949;
+$fun-blue: #1e58bc;
+$woodsmoke: #131415;
+$monza: #d3003d;
+$catskill-white: #f3f6f9;
+$silver: #cacaca;
+$mirage: #192836;
+$denim: #1955bf;
+
+
+/******************** Box-shadows ********************/
+$btn-default-box-shadow: 0 8px 12px 0 rgba($black, 0.15);
+$event-card-box-shadow: 0 8px 12px 0 rgba($black, 0.12);
+$upcoming-events-img-box-shadow:  0 4px 8px 0 rgba($black, 0.35);
+$upcoming-events-container-box-shadow: 0 8px 14px 4px rgba($black, 0.08);
+$slider-section-box-shadow: 0 25px 14px 4px rgba($black, 0.08);
+$search-section-box-shadow: 0 6px 14px 0 rgba($black, 0.15);
+$theater-seasons-card-img-box-shadow: 0 6px 8px 4px rgba($black, 0.16);
+$checkout-print-block-box-shadow: 0 8px 15px 0 rgba($black, 0.15);
+$tooltip-box-shadow-default: 0 4px 14px 0 rgba($black, 0.06);
+
+/******************** Buttons ********************/
+$btn-default-color: $firefly;
+$btn-default-bg-color: $tulip-tree;
+$btn-default-bg-hover-color: $bright-sun;
+$btn-secondary-color: $white;
+$btn-secondary-bg-color: $firefly;
+$btn-secondary-bg-hover-color: $firefly;
+$btn-primary-bg-color: $slate-gray;
+$btn-primary-color: $white;
+
+$link-color: $fun-blue;
+
+/******************** Forms *******************/
+$form-success-color: $eucalyptusapprox;
+$form-error-color: $monza;
+$form-control-br-color: $dusty-gray;
+$form-control-placeholder-color: $silver;
+$form-check-label-color: $tundora-0;
+$form-check-label-border-color: $dusty-gray;
+$form-check-label-bg-color: $white;
+$form-radio-label-color: $tundora-0;
+$form-radio-active-bg-color: $fun-blue;
+$form-radio-bg-color: $white;
+$form-radio-mobile-border-color: $dusty-gray;
+$form-radio-mobile-icon-color: $sandal;
+$form-radio-mobile-border-active-color: $denim;
+$form-radio-mobile-bg-active-color: $zircon;
+
+// Event Card component *new*
+$event-card-caption-color: $slate-gray;
+$event-card-title-color: $regal-blue;
+$event-card-subtitle-color: $carrot-orange;
+$event-card-text-color: $firefly;
+$event-card-label-default-bg-color: $sandal;
+$event-card-label-default-color: $white;
+$event-card-notification-color: $white;
+$event-card-notification-bg-color: rgba($white, 0.25);
+$event-card-notification-hover-color: $carrot-orange;
+$event-card-notification-hover-bg-color: $white;
+
+$event-list-card-subtitle-color: $white;
+$event-list-card-label-color: $nevada;
+$event-list-card-text-color: $woodsmoke;
+$event-list-card-collapse-color: $fun-blue;
+$event-list-card-title-color: $green-vogue;
+$event-list-card-title-label-color: $rolling-stone2;
+$event-list-card-border-color: $alto-3;
+$event-list-card-body-bg-color: $aqua-haze;
+$event-list-card-body-color: $green-vogue;
+$event-list-card-body-label-color: $nevada;
+$event-list-card-warning-color: $rolling-stone;
+$event-list-sold-out-color: $white;
+$event-list-sold-out-bg-color: $mine-shaft;
+
+$event-list-date-label-color: $nevada;
+
+$ticket-list-item-data-color: #eeeeee;
+$ticket-list-item-br-color: $nevada;
+$ticket-list-header-bg-color: $nevada;
+
+//Quantity component
+$quantity-border-color: $silver;
+$quantity-bg-color: $white;
+$quantity-value-color: $woodsmoke;
+$quantity-btn-bg-color: $white;
+$quantity-btn-color: $fun-blue;
+$quantity-btn-active-bg-color: $fun-blue;
+$quantity-btn-active-color: $white;
+$quantity-big-invalid-color: $milano-red;
+
+//Tooltip
+$tooltip-color-default: $tundora-0;
+$tooltip-bg-color-default: $white;
+
+//Modals
+$ticket-modal-footer-bg-color: $aqua-haze;
+$ticket-modal-footer-link-color: $fun-blue;
+$ticket-modal-header-color: $madison;
+$ticket-modal-title-color: $woodsmoke;
+$ticket-modal-text-color: $tundora-0;
+$ticket-modal-note-color: $green-vogue;
+$ticket-modal-error-icon-color: $milano-red;
+
+// External components *new*
+$tck-breadcrumb-active-color: $carrot-orange;
+$tck-breadcrumb-color: $slate-gray;
+
+// navigation *new*
+$nav-bar-background-color: $firefly;
+$nav-bar-background-dark-color: $firefly;
+$nav-bar-font-color: $white;
+$nav-bar-language-toggle-color: $pale-sky;
+$nav-bar-cart-number-color: $firefly;
+$nav-bar-cart-number-bg-color: $white;
+
+// Footer *new*
+$footer-bg-color: $regal-blue;
+$footer-nav-bg-color: $firefly;
+$footer-color: $alto-1;
+$footer-mobile-border-color: $dusty-gray;
+$footer-mobile-icon-bg-color: $shark-1;
+
+// Home page section *new*
+$home-page-section-title-color: $regal-blue;
+$home-page-section-subtitle-color: $slate-gray;
+
+// Home page Search *new*
+$search-section-bg-color: $white;
+$search-section-bg-mobile-color: $firefly-2;
+$search-section-input-border-color: $slate-gray;
+$search-section-input-bg-color: $white;
+$search-section-select-color: $slate-gray;
+$search-section-select-icon-color: $firefly;
+$search-section-select-border-color: $bombay;
+$search-section-wrapper-bg-color: rgba($firefly, 0.9);
+$search-section-keyword-color: $white;
+$search-section-keyword-border-color: $tulip-tree;
+$search-section-popular-label-color: $carrot-orange;
+
+// Slider component *new*
+$carousel-caption-content-bg-color: rgba($firefly-1, 0.9);
+$carousel-title-color: $carrot-orange;
+$carousel-schedules-color: rgba($white, 0.4);
+$carousel-description-color: $white;
+$carousel-place-color: $rolling-stone;
+$carousel-label-bg-color: $sandal;
+$carousel-label-color: $white;
+
+// Home page upcoming events section *new*
+$upcoming-events-section-bg-color: rgba($regal-blue, 0.06);
+$upcoming-events-content-bg-color: $white;
+$upcoming-events-card-location-color: $slate-gray;
+$upcoming-events-card-date-color: $firefly;
+$upcoming-events-card-title-color: $regal-blue;
+
+// Home page contacts *new*
+$home-page-contacts-border: $dusty-gray;
+$contacts-btn-bg-color: $slate-gray;
+$contacts-btn-color: $white;
+$contacts-top-icon-color: $slate-gray;
+$contacts-title-color: $firefly;
+$contacts-subtitle-color: rgba($firefly, 0.59);
+$contacts-separator-color: $alto-2;
+$contacts-separator-mobile-color: $dusty-gray;
+
+//Home page festival section
+//TODO remove if not necessary
+$festival-subtitle-color: $white;
+$festival-title-color: $monza;
+
+// Theater seasons card *new*
+$theater-seasons-card-title-color: $firefly;
+$theater-seasons-card-subtitle-color: $slate-gray;
+$theater-seasons-card-text-color: rgba($firefly, 0.61);
+
+// Newsletter component *new*
+$newsletter-form-label-color: $slate-gray;
+
+//FAQ component
+$faq-note-color: $nevada;
+
+//Our services
+$our-services-bg-color: rgba($geyser, 0.19);
+$our-services-card-header-bg-color: $rolling-stone;
+$our-services-card-header-color: $white;
+$our-services-card-text-color: $nevada;
+
+//List Events component
+$list-events-header-color: $woodsmoke;
+$list-events-header-border-color: $alto-3;
+$list-events-footer-color: $nevada;
+
+//Get tickets
+$get-tickets-filter-btn-hover-color: $pale-sky;
+
+//Location Info component
+$location-info-bg-color: $aqua-haze;
+$location-info-title-color: $woodsmoke;
+$location-info-header-border-color: $alto-3;
+
+//Location Map componetn
+$location-map-title-color: $nevada;
+$location-map-info-text-color: $green-vogue;
+$location-map-bg-color: $white;
+$location-map-border-color: $alto-3;
+
+//Contacts component
+$location-contacts-title-color: $nevada;
+$location-contact-item-color: $green-vogue;
+
+//Checkout page *in progress*
+$checkout-page-title-color: $firefly;
+$checkout-page-subtitle-color: $sandal;
+$checkout-page-text-color: $slate-gray;
+$checkout-page-content-border-color: rgba($slate-gray, 0.2);
+$checkout-page-content-title-color: $shark-3;
+
+$checkout-page-timer-br-color: $slate-gray;
+$checkout-page-timer-color: $slate-gray;
+$checkout-page-timer-br-color-alert: $monza;
+$checkout-page-timer-color-alert: $monza;
+$checkout-page-timer-bg-color: $white;
+
+//*new*
+$checkout-page-tickets-header-bg-color: $firefly;
+$checkout-page-tickets-title-color: $white;
+$checkout-page-tickets-bg-color: $white;
+
+$checkout-page-additional-title-color: $rolling-stone;
+$checkout-page-additional-body-border-color: rgba($dusty-gray, 0.24);
+$checkout-page-additional-table-header-color: $dusty-gray;
+
+$checkout-page-contacts-bg-color: $zircon;
+$checkout-page-contacts-title-border-color: rgba($dusty-gray, 0.24);
+$checkout-page-contacts-label-color: $lynch;
+
+$checkout-page-info-color: $tundora-0;
+$checkout-page-total-color: $tundora-0;
+
+// *in progress*
+$checkout-form-label-color: $slate-gray;
+$checkout-form-text-color: $regal-blue;
+$checkout-form-input-border-color: rgba($slate-gray, 0.4);
+$checkout-form-link-color: $fun-blue;
+$checkout-form-link-bg-color: $white;
+$checkout-form-check-label-color: $tundora-0;
+$checkout-form-section-title-color: $regal-blue;
+$checkout-form-radio-icon-color: $sandal;
+
+// *in progress*
+$checkout-print-block-border-color: $slate-gray;
+$checkout-print-active-block-bg-color: $tulip-tree;
+$checkout-print-active-block-bx-shadow-color: rgba($fire-bush, 0.45);
+$checkout-print-active-block-text-color: $firefly;
+$checkout-print-block-header-border-color: $silver;
+$checkout-print-block-header-icon-color: $slate-gray;
+$checkout-print-block-title-color: $mirage;
+$checkout-print-block-text-color: $slate-gray;
+$checkout-print-block-active-icon-bg-color: $white;
+$checkout-print-block-active-icon-color: $denim;
+
+$checkout-note-block-bg-color: $zircon;
+$checkout-note-block-icon-color: $white;
+$checkout-note-block-icon-bg-color: $denim;
+$checkout-note-block-title-color: $green-vogue;
+$checkout-note-block-text-color: $tundora-1;
+
+$checkout-courier-block-icon-color: $denim;
+
+// *new*
+$checkout-personal-event-header-bg-color: $firefly;
+$checkout-personal-event-title-color: $white;
+$checkout-personal-event-location-color: $white;
+$checkout-personal-event-subheader-bg-color: $tulip-tree;
+$checkout-personal-event-subheader-color: $firefly;
+$checkout-personal-tickets-border-color: rgba($slate-gray, 0.2);
+$checkout-personal-ticket-name-color: $regal-blue;
+$checkout-personal-ticket-label-color: $silver-sand;
+$checkout-personal-ticket-text-color: $firefly;
+
+//*new*
+$checkout-summary-title-color: $firefly;
+$checkout-summary-tickets-header-bg-color: $firefly;
+$checkout-summary-tickets-title-color: $white;
+$checkout-summary-tickets-location-color: $white;
+$checkout-summary-tickets-table-header-color: $silver-sand;
+$checkout-summary-tickets-table-text-color: $tundora-0;
+$checkout-summary-tickets-remove-icon-color: $monza;
+
+$checkout-summary-insurance-text-color: $woodsmoke;
+
+$checkout-summary-coupon-bg-color: rgba($spindle, 0.18);
+$checkout-summary-coupon-text-color: $nevada;
+$checkout-summary-coupon-input-border-color: $dusty-gray;
+$checkout-summary-coupon-input-bg-color: $white;
+$checkout-summary-coupon-btn-bg-color: $white;
+$checkout-summary-coupon-btn-color: $fun-blue;
+
+$checkout-suggestion-title-color: $tundora-0;
+$checkout-suggestion-item-bg-color: $alabaster;
+$checkout-suggestion-categoty-color: $nevada;
+$checkout-suggestion-date-color: $rolling-stone;
+
+//Checkout Wizard indicator
+$checkout-indicator-title-color: $tuna3;
+$checkout-indicator-completed-bg-color: $bright-green;
+$checkout-indicator-completed-color: $white;
+$checkout-indicator-active-bg-color: $bright-green;
+$checkout-indicator-active-color: $white;
+$checkout-indicator-not-started-bg-color: $alto-0;
+
+//Search result header
+$search-result-header-text-color: $white;
+$search-result-header-caption-color: rgba($white, 0.5);
+$search-result-header-bg-color: linear-gradient(to left, rgba(38, 42, 45, 0.22) 71%, #0b0c0f 9%);
+
+//Search result filters
+$search-result-filters-color: $green-vogue;
+$search-result-filters-bg-color: $wild-sand;
+
+//Search result list
+$search-result-list-title-color: $woodsmoke;
+$search-result-list-header-border-color: $alto-3;
+
+//Search result no items
+$search-result-no-items-title-color: $woodsmoke;
+$search-result-no-items-subtitle-color: $nevada;
+$search-result-no-items-suggestion-color: $woodsmoke;
+
+//Sector ticket availability
+$sector-ticket-avail-title-color: $white;
+$sector-ticket-avail-title-bg-color: $river-bed;
+$sector-ticket-avail-switch-title-color: $green-vogue;
+$sector-ticket-avail-switch-border-color: $alto-5;
+$sector-ticket-avail-switch-bg-color: rgba($geyser, 0.38);
+$sector-ticket-avail-switch-mobile-bg-color: $white;
+$sector-ticket-avail-nr-switch-br-color: $alto-5;
+$sector-ticket-avail-sector-header-bg-color: $porcelain2;
+$sector-ticket-avail-adjacent-color: $tuna2;
+$sector-ticket-avail-sector-list-border-color: $alto-3;
+$sector-ticket-avail-sector-list-bg-color: $white;
+$sector-ticket-avail-sector-name-color: $green-vogue;
+$sector-ticket-avail-sector-description-color: $rolling-stone2;
+$sector-ticket-avail-sold-out-bg-color: $mine-shaft;
+$sector-ticket-avail-ticket-nr-bg-color: rgba($geyser, 0.38);
+$sector-ticket-avail-ticket-nr-br-color: $alto-3;
+$sector-ticket-avail-ticket-price-color: $tundora-0;
+$sector-ticket-avail-ticket-price-bg-color: $athens-gray;
+$sector-ticket-avail-sector-price-bg-color: $porcelain2;
+$sector-ticket-avail-sector-price-br-color: $alto-3;
+
+
+/******************** Screen sizes *******************/
+$size-xl: 1200px;
+$size-lg: 992px;
+$size-md: 768px;
+$size-sm: 576px;
+$ipad-pro-landscape: 1366px;
+
+$max-container-width: 1336px;

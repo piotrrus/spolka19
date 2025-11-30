@@ -1,0 +1,187 @@
+@use 'variables';
+
+.container {
+     margin-top: 75px;
+}
+
+.navbar a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+}
+
+.navbar a:hover {
+     background: #ddd;
+     color: black;
+}
+
+.main {
+     padding: 16px;
+     margin-top: 30px;
+     height: 1500px; /* Used in this example to enable scrolling */
+}
+
+.btn-outline-secondary {
+     --bs-btn-color: #e1e7ec !important;
+     --bs-btn-border-color: #d5dbe000 !important;
+     width: 115px;
+}
+
+.btn-outline-secondary-icon {
+     --bs-btn-color: #e1e7ec !important;
+     --bs-btn-border-color: #d5dbe000 !important;
+     width: 35px;
+}
+
+.title {
+     margin-right: 20px;
+}
+.dropdown {
+     width: 130px;
+}
+
+.mat-mdc-button-base {
+     width: 130px;
+     font-size: 16px;
+}
+
+.mat-toolbar {
+     background-color: #555f71;
+     color: white;
+}
+.mat-button {
+     color: white;
+}
+.spacer {
+     flex: 1 1 auto;
+}
+
+.nav-field {
+     margin-top: 15px;
+}
+// .header {
+//      height: 100px;
+// }
+
+// .fixed-top {
+//      // z-index: -1;
+//      position: fixed;
+// }
+
+// .navbar {
+//      background-color: #12122c6b;
+// }
+
+// .nav-item {
+//      margin-left: 15px;
+// }
+
+// a {
+//      color: #6c757d;
+// }
+
+// .btn-link {
+//      color: #6c757d;
+//      font-size: 1rem;
+// }
+
+// .nav-link {
+//      padding-top: 13px;
+//      font-size: 1rem;
+// }
+
+// a:active {
+//      color: blue;
+// }
+
+// .nav-link {
+//      active {
+//           color: yellow;
+//           //font-size: 1.4rem;
+//      }
+// }
+
+// .main-search-form {
+//      margin-top: 15px;
+// }
+
+// #dropdown1 {
+//      width: 200px;
+// }
+
+// #logo img {
+//      float: none;
+//      margin: 0px;
+//      margin-left: 8px;
+// }
+
+// .adv_search {
+//      float: right;
+//      top: 2.5rem;
+//      font-family: 'Verdana';
+//      font-size: 10px;
+//      color: #ddd;
+// }
+
+// .main-search-form {
+//      margin-top: 1px;
+// }
+
+// .nav-original {
+//      background-color: #1c3a5c;
+// }
+
+// .nav-wrapper {
+//      color: #fff;
+// }
+
+// .mat-icon {
+//      color: #fff;
+// }
+
+// .header .mat-icon-button {
+//      padding-top: 30px;
+// }
+
+// .zoom {
+//      transition: transform 0.2s;
+// }
+
+// .zoom:hover {
+//      transform: scale(1.2);
+//      opacity: 0.2;
+// }
+
+// .mat-fab .mat-blue,
+// .mat-mini-fab .mat-blue,
+// .mat-raised-button .mat-blue {
+//      background-color: #1c3a5c;
+// }
+
+// .mat-fab .mat-grey,
+// .mat-mini-fab .mat-grey,
+// .mat-raised-button .mat-grey {
+//      background-color: #ddd;
+// }
+
+// .fas {
+//      color: #fff;
+//      font-size: 28px;
+// }
+
+.mat-toolbar {
+     background-color: #555f71;
+     color: white;
+}
+
+.spacer {
+     flex: 1 1 auto;
+}
+
+.nav-field {
+     margin-top: 15px;
+}

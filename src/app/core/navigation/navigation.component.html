@@ -1,0 +1,185 @@
+<mat-toolbar color="primary">
+    <span class="title">SPÓŁKA</span>
+
+    <!-- <a type="button" routerLink="/home" class="btn btn-outline-secondary">Home</a> -->
+
+    <!-- <button class="btn btn-primary" type="submit" routerLink="/home">Button</button> -->
+    <button routerLink="/home" type="button" class="btn btn-outline-secondary">Home</button>
+    <button routerLink="/clients" type="button" class="btn btn-outline-secondary">Klienci</button>
+
+    <div class="dropdown">
+        <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            Zamówienia
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/orders">Wszystkie</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <!-- <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Klienci
+        </button> -->
+    <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1"> -->
+    <!-- <button routerLink="/clients" ngbDropdownItem>Lista klientów</button> -->
+
+    <!-- <button routerLink="/clients/new" ngbDropdownItem>Nowy klient</button> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Zamówienia
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button routerLink="/orders" ngbDropdownItem>Wszystkie</button>
+            <button routerLink="/orders/status/1" ngbDropdownItem>Nowe zamówienia</button>
+            <button routerLink="/orders/status/7" ngbDropdownItem>Oczekiwanie na materiał</button>
+            <button routerLink="/orders/status/8" ngbDropdownItem>W produkcji</button>
+            <button routerLink="/orders/status/9" ngbDropdownItem>Wykonane</button>
+            <button routerLink="/orders/status/10" ngbDropdownItem>Odebrane</button>
+        </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Produkcja
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button routerLink="/production" ngbDropdownItem>Zamówienia w produkcji</button>
+            <button routerLink="/production/archives" ngbDropdownItem>Archiwum</button>
+        </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Magazyn
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button routerLink="/stock/100" ngbDropdownItem>Stan magazynu</button>
+            <button routerLink="/stock/101" ngbDropdownItem>Zamówione materiały</button>
+            <button routerLink="/stock/102" ngbDropdownItem>Zwroty</button>
+            <button routerLink="/stock/103" ngbDropdownItem>Artykuły wyczerpane</button>
+            <button routerLink="/warehouses" ngbDropdownItem>Lista magazynów</button>
+        </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Raporty
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button routerLink="/reports/1" ngbDropdownItem>
+                Zamówienia przyjęte wg. asortymentu
+            </button>
+            <button routerLink="/reports/2" ngbDropdownItem>
+                Zamówienia zrealizowane/wydane klientowi
+            </button>
+            <button routerLink="/reports/3" ngbDropdownItem>
+                Zamówienia zaliczkowane niezrealizowanych/nie odebranych
+            </button>
+            <button routerLink="/reports/4" ngbDropdownItem>
+                Zestawienie miesięczne zleceń produkcyjnych
+            </button>
+            <button routerLink="/reports/inventory" ngbDropdownItem>
+                Stan magazynu: roczne/inwentaryzacja
+            </button>
+            <!-- <button routerLink="/reports/inventory" ngbDropdownItem>Produkcja - inwentaryzacja</button> -->
+            <button routerLink="/reports/year" ngbDropdownItem>Produkcja - raport roczny</button>
+        </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block">
+        <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+        >
+            Kalendarz
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button routerLink="/events/1" ngbDropdownItem>Spotkania</button>
+            <button routerLink="/events/2" ngbDropdownItem>Sprawy personalne</button>
+            <button routerLink="/events/3" ngbDropdownItem>Produkcja</button>
+        </div>
+    </div>
+    <ng-container *ngIf="isAdmin">
+        <div ngbDropdown class="d-inline-block">
+            <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="dropdownBasic1"
+                ngbDropdownToggle
+            >
+                Inne
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button routerLink="/admin" ngbDropdownItem>Admin</button>
+                <!-- <hr /> -->
+                <button routerLink="/assorts" ngbDropdownItem>Asortyment</button>
+                <button routerLink="/linings" ngbDropdownItem>Podszewki</button>
+                <button routerLink="/felts" ngbDropdownItem>Filc</button>
+                <button routerLink="/contractors" ngbDropdownItem>Dostawcy</button>
+                <button routerLink="/warehouses" ngbDropdownItem>Lista magazynów</button>
+
+                <button routerLink="/consumption-standards" ngbDropdownItem>
+                    Standard zużycia materiału
+                </button>
+                <!-- <button routerLink="/shirt-description" ngbDropdownItem>Koszula - opisy</button> -->
+            </div>
+        </div>
+    </ng-container>
+    <div class="spacer"></div>
+
+    <!-- <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-secondary" id="dropdownBasic3" ngbDropdownToggle>
+            <mat-icon aria-hidden="false" aria-label="person icon" fontIcon="person"></mat-icon>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic3">
+            <button routerLink="/admin" ngbDropdownItem>Zmień hasło</button>
+        </div>
+    </div> -->
+    <a
+        type="button"
+        routerLink="/logout"
+        class="btn btn-outline-secondary-icon"
+        title="Zmień hasło"
+    >
+        <mat-icon aria-hidden="false" aria-label="person icon" fontIcon="person"></mat-icon> </a
+    ><a type="button" routerLink="/logout" class="btn btn-outline-secondary-icon" title="Wyloguj">
+        <mat-icon aria-hidden="false" aria-label="exit icon" fontIcon="exit_to_app"></mat-icon>
+    </a>
+</mat-toolbar>

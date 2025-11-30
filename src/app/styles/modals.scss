@@ -1,0 +1,59 @@
+@use 'colors' as color;
+@use 'fonts' as font;
+
+.modal {
+     &-icon-close {
+          padding-left: 10%;
+     }
+     &-title {
+          color: color.$black;
+          padding-left: 2vw;
+          padding-top: 0.8vw;
+          font-size: font.$font-size-ml;
+          font-family: Courier new;
+     }
+
+     &-header {
+          width: 99.5%;
+          border-bottom: 1px solid #c0c0c0;
+          padding-bottom: 12px;
+          .close {
+               padding: 1rem;
+               margin: -1rem -1rem -1rem auto;
+          }
+          margin-bottom: 15px;
+     }
+
+     &-button-section {
+          margin-top: 15px;
+          text-align: right;
+          button {
+               margin-right: 1vw;
+               background: #6b84af;
+               color: white;
+               font-size: 11px;
+               line-height: 18px;
+               width: 7vw;
+          }
+     }
+     &-form-section {
+          margin-top: 25px;
+     }
+     &-error {
+          color: color.$red;
+     }
+     &-remove {
+          text-align: right;
+     }
+}
+
+button.close {
+     font-size: 25px;
+     padding: 0;
+     background-color: transparent;
+     border: 0;
+}
+
+.mat-mdc-dialog-surface {
+     border-radius: 5px;
+}
