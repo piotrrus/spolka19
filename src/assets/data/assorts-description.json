@@ -1,0 +1,16 @@
+[
+     { "id": "1", "title": "garnitur 2cz.", "name": "", "maxValue": "10000" },
+     { "id": "2", "title": "garnitur 3cz.", "name": "", "maxValue": "10000" },
+     { "id": "3", "title": "smoking 2cz.", "name": "", "maxValue": "10000" },
+     { "id": "4", "title": "smoking 3cz.", "name": "", "maxValue": "10000" },
+     { "id": "5", "title": "frak", "name": "", "maxValue": "10000" },
+     { "id": "6", "title": "marynarka", "name": "", "maxValue": "7000" },
+     { "id": "7", "title": "kamizelka", "name": "", "maxValue": "2000" },
+     { "id": "8", "title": "spodnie", "name": "", "maxValue": "2000" },
+     { "id": "9", "title": "szorty", "name": "", "maxValue": "1000" },
+     { "id": "13", "title": "koszula", "name": "", "maxValue": "2000" },
+     { "id": "21", "title": "płaszcz", "name": "", "maxValue": "2000" },
+     { "id": "52", "title": "krawat", "name": "", "maxValue": "2000" },
+     { "id": "53", "title": "mucha", "name": "", "maxValue": "2000" },
+     { "id": "73", "title": "spódnica", "name": "", "maxValue": "2000" }
+]

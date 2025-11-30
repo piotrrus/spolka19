@@ -1,0 +1,16 @@
+[
+     { "value": "", "label": "wzrost", "description": "wzrost" },
+     { "value": "", "label": "obwod_klatki_piersiowej", "description": "obwód klatki piersiowej" },
+     { "value": "", "label": "obwod_pasa_marynarki", "description": "obwód pasa marynarki'" },
+     { "value": "", "label": "pas_spodni", "description": "pas spodni" },
+     { "value": "", "label": "szerokość_przodu", "description": "szerokość przodu" },
+     { "value": "", "label": "szerokosc_tylu", "description": "szerokość tyłu" },
+     { "value": "", "label": "bark_rekaw", "description": "bark/rękaw" },
+     { "value": "", "label": "obwod_uda", "description": "obwód uda" },
+     { "value": "", "label": "szerokosc_barkow", "description": "szerokość barków'" },
+     { "value": "", "label": "długosc_plecow", "description": "długość pleców" },
+     { "value": "", "label": "obwod_bicepsu", "description": "obwód bicepsu" },
+     { "value": "", "label": "obwod_bioder", "description": "obwód bioder" },
+     { "value": "", "label": "dl_zewn_nogawki_bez_paska", "description": "dł.zewn.nogawki bez paska'" },
+     { "value": "", "label": "uwagi", "description": "uwagi" }
+]
