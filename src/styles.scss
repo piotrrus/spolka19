@@ -1,0 +1,32 @@
+@use 'node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+@use 'node_modules/bootstrap/scss/bootstrap.scss';
+@use './app/styles/material.scss';
+@use './app/styles/buttons.scss';
+@use 'node_modules/@swimlane/ngx-datatable/themes/material.scss' as swimlane;
+@use 'node_modules/material-design-icons/iconfont/material-icons.css';
+@use '@angular/material' as mat;
+// @use 'node_modules/ngx-spinner/animations/ball-circus.css';
+// @use 'node_modules/ngx-spinner/animations/line-spin-fade.css';
+// @use 'node_modules/ngx-spinner/animations/ball-spin-clockwise-fade';
+html {
+     color-scheme: light dark;
+     @include mat.theme(
+          (
+               color: mat.$violet-palette,
+               typography: Roboto,
+               density: 0,
+          )
+     );
+}
+body {
+     height: 100%;
+}
+body {
+     margin: 0;
+     font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.page-title {
+     font-family: Courier New;
+     font-size: 24px;
+     margin-bottom: 15px;
+}
