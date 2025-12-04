@@ -1,0 +1,11 @@
+<app-table-header
+    [title]="tableTitle"
+    [noadd]="false"
+    (addNewItem)="addNew()"
+    (filterData)="onFilterData($event)"
+></app-table-header>
+<app-contractors-table
+    [tableTitle]="tableTitle"
+    [tableData]="tableData$ | async"
+    (showDetailsModal)="showDetails($event)"
+></app-contractors-table>

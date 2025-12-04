@@ -1,0 +1,25 @@
+<div class="row modal-header">
+    <div class="col-lg-10">
+        <div class="modal-title">{{data.title}}</div>
+    </div>
+    <div class="col-lg-2 modal-icon-close">
+        <mat-icon class="modal-close-icon" (click)="onClose()"></mat-icon>
+    </div>
+</div>
+
+<mat-dialog-content class="modal-content">
+    <div class="row modal-details-section">
+        <app-warehouse-form
+            [formData]="data.data"
+            (formChange)="onFormChange($event)"
+            (isFormValid)="onFormValid($event)"
+        ></app-warehouse-form>
+    </div>
+
+    <div class="row modal-button-section">
+        <div class="col-lg-12">
+            <button mat-raised-button (click)="onSave()" [disabled]="!isFormValid">Zapisz</button>
+            <button mat-raised-button class="btn-cancel" (click)="onClose()">Przerwij</button>
+        </div>
+    </div>
+</mat-dialog-content>

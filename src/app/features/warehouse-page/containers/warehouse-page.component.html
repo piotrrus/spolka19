@@ -1,0 +1,13 @@
+<app-table-header
+    [title]="tableTitle"
+    [isFiltered]="(filteredTableData$ | async)?.length ? true : false"
+    [noadd]="false"
+    (addNewItem)="onAddNew()"
+    (filterData)="onFilterData($event)"
+></app-table-header>
+
+<app-warehouses-table
+    [tableTitle]="tableTitle"
+    [tableData]="filteredTableData$ | async"
+    (openDetailsModal)="showDetails($event)"
+></app-warehouses-table>
