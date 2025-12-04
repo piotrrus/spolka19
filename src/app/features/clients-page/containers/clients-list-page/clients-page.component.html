@@ -1,0 +1,15 @@
+<app-table-header
+    [title]="tableTitle"
+    [noadd]="false"
+    (addNewItem)="addNew()"
+    (filterData)="updateFilter($event)"
+></app-table-header>
+
+<app-clients-table
+    [tableTitle]="tableTitle"
+    [tableData]="tempTable"
+    (deleteClientAction)="deleteClient($event)"
+    (showDetailsAction)="navigateToClientDetails($event)"
+    (addOrderAction)="navigateToAddOrder($event)"
+    (addNewClientOrderAction)="navigateToAddNewOrder($event)"
+></app-clients-table>

@@ -1,0 +1,113 @@
+<!-- <ngx-datatable
+    columnMode="force"
+    class="material striped"
+    rowHeight="auto"
+    [rows]="rows"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [limit]="10"
+    [messages]="noDataMessage"
+>
+ -->
+
+<!-- <ngx-datatable-column name="Nr. klienta" prop="client_nr" [width]="100">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a href="javascript:void(0)" (click)="showDetails(row['id'])" title="pokaż szczegóły">
+                {{ value }}
+            </a>
+        </ng-template>
+    </ngx-datatable-column> -->
+
+<!-- <ngx-datatable-column name="Imię i nazwisko" prop="firstname" [width]="200">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ row["firstname"] }} {{ row["lastname"] }}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Email" prop="email" [width]="250">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Ostatnie zamówienie" prop="lastAddDate" [width]="150">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <span *ngIf="value">{{ value | date: "yyyy-MM-dd" }} </span>
+            <ng-container *ngIf="row['amount']"> ({{row['amount']}}) </ng-container>
+        </ng-template>
+    </ngx-datatable-column> -->
+
+<!-- <ngx-datatable-column name="Status ost. zam." prop="status">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template> -->
+<!-- @if (row['lastStatusId']) {}  -->
+<!-- <ng-container *ngIf="row['lastStatusId']">
+                <a
+                    href="javascript:void(0)"
+                    (click)="addOrder(row['lastOrderId'])"
+                    title="Nowe zamówienie"
+                >
+                    NOWE
+                </a>
+            </ng-container> -->
+<!-- @if (!row['lastStatusId']) {} -->
+<!-- <ng-container *ngIf="!row['lastStatusId']">
+                <a
+                    href="javascript:void(0)"
+                    (click)="newClientOrder(row['id'])"
+                    title="Dodaj zamówienie"
+                >
+                    DODAJ
+                </a>
+            </ng-container>
+        </ng-template>
+    </ngx-datatable-column> -->
+
+<!-- <ngx-datatable-column name="Usuń" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template> -->
+<!-- @if (!row['lastStatusId']) {}  -->
+<!-- <ng-container *ngIf="!row['lastStatusId']">
+                <a href="javascript:void(0)" (click)="deleteClient(row['id'])" title="Usuń klienta">
+                    Usuń {{row['lastStatusId']}}</a
+                >
+            </ng-container>
+        </ng-template>
+    </ngx-datatable-column> -->
+<!-- </ngx-datatable> -->
+
+<div class="table-header">
+    <ngx-datatable
+        [columnMode]="'force'"
+        class="material striped"
+        [rows]="tableData"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [limit]="10"
+        [messages]="noDataMessage"
+    >
+        <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+            <ngx-datatable-column name="{{dataTableColumns.name}}" prop="{{dataTableColumns.prop}}">
+                <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                    <!-- <ng-container *ngIf="dataTableColumns.link!==true; else iconTemplate"></ng-container> -->
+                    <ng-container *ngIf="dataTableColumns.link">
+                        <a
+                            href="javascript:void(0)"
+                            (click)="showDetails(row['id'])"
+                            title="pokaż szczegóły"
+                        >
+                            {{ value }}
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="!dataTableColumns.link"> {{ value }} </ng-container>
+                    <!-- <ng-container *ngIf="!row['lastStatusId']">
+                        <a
+                            href="javascript:void(0)"
+                            (click)="deleteClient(row['id'])"
+                            title="Usuń klienta"
+                        >
+                            Usuń {{row['lastStatusId']}}</a
+                        >
+                    </ng-container> -->
+                </ng-template>
+            </ngx-datatable-column>
+        </ng-container>
+    </ngx-datatable>
+</div>

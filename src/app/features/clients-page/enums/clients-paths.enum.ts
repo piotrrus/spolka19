@@ -1,0 +1,15 @@
+export enum CLIENTS_API_PATHS {
+     DETAILS = 'client/details/',
+     DETAILS_API = 'clients/show/',
+     UPDATE = 'clients/update/',
+     CREATE = 'clients/create',
+     DELETE = 'clients/delete/',
+     LIST = 'clients',
+     MEASURES = 'measures/client/',
+     MEASURES_UPDATE = 'measures/update/',
+     MEASURES_CREATE = 'measures/create',
+     EVENTS = 'client-events/client/',
+     EVENTS_LAST = 'client-events/last/',
+     EVENTS_UPDATE = 'client-events/update/',
+     EVENTS_CREATE = 'client-events/create/',
+}

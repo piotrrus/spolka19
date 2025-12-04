@@ -1,0 +1,25 @@
+// @use 'variables';
+@use 'buttons';
+@use 'table';
+
+.table-title {
+     color: #c4c1c1;
+     font-size: 17px;
+     line-height: 24px;
+}
+
+.client-order-section {
+     margin-bottom: 15px;
+}
+
+.btn-grey {
+     background-color: #3f4b7e7a;
+}
+
+.add-order-col {
+     text-align: right;
+}
+
+.btn-add-order {
+     width: 180px !important;
+}

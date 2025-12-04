@@ -1,0 +1,31 @@
+// @use 'variables';
+@use 'forms';
+@use 'buttons';
+
+.event-form {
+     margin-left: 5%;
+     margin-right: 5%;
+     margin-top: 25px;
+     &-label {
+          margin-top: 2px;
+     }
+}
+
+.description {
+     margin-left: 25px;
+     font-size: 20px;
+}
+
+// .button-section {
+//      margin-top: 15px;
+//      margin-bottom: 15px;
+//      text-align: right;
+//      button {
+//           margin-right: 1vw;
+//           background: #3a5c97;
+//           color: white;
+//           font-size: 11px;
+//           line-height: 18px;
+//           width: 7vw;
+//      }
+// }

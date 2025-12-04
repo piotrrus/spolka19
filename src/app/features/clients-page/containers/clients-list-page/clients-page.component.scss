@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'table';
+@use 'buttons';
+
+.filter-dropdowns-group {
+     margin-bottom: 15px;
+}
+
+// .filter-input {
+//     padding: 8px;
+//     margin : 15px auto;
+//     width  : 100%;
+// }
+
+.no-right-margin {
+     margin-right: 0px;
+}

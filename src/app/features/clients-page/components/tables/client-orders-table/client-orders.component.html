@@ -1,0 +1,48 @@
+<div class="row client-order-section">
+    <div class="col col-lg-6 table-title">{{tableName}}</div>
+    <div class="col col-lg-6 add-order-col">
+        <button mat-raised-button (click)="addOrder()" class="btn-add-order">
+            Dodaj zamówienie
+        </button>
+    </div>
+</div>
+
+<ngx-datatable
+    class="material striped"
+    rowHeight="auto"
+    [rows]="clientOrders"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [limit]="10"
+    [columnMode]="'force'"
+    [rowHeight]="50"
+    [messages]="noDataMessage"
+>
+    <ngx-datatable-column name="Nr zam." prop="invoiceNr" [width]="250">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a
+                href="javascript:void(0)"
+                (click)="showDetails(row['orderId'])"
+                title="pokaż szczegóły"
+            >
+                {{ value }}
+            </a>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Data zam." prop="orderDate" [width]="250">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <span *ngIf="value">{{ value | date: "yyyy-MM-dd" }} </span>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Data wyk." prop="deliveryDate" [width]="250">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <span *ngIf="value">{{ value | date: "yyyy-MM-dd" }}</span>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Status ost. zam." prop="status" [width]="250">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>

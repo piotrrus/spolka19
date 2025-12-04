@@ -1,0 +1,156 @@
+<div class="full-bg-img mask rgba-gradient">
+    <div class="container" style="margin-top: 50px">
+        <div class="row">
+            <div class="col col-lg-9">
+                @if (clientData){
+
+                <!-- <mat-icon svgIcon="edit"></mat-icon> -->
+
+                <app-client-main-data
+                    [clientData]="clientData"
+                    (isDelete)="deleteClient()"
+                ></app-client-main-data>
+
+                } @if (clientOrders$ | async ){
+                <app-client-orders
+                    [clientOrders]="clientOrders$ | async"
+                    (addClientOrder)="addClientOrder()"
+                    (navigateToOrderDetails)="navigateToOrderDetails($event)"
+                >
+                </app-client-orders>
+                }
+            </div>
+            <div class="col col-lg-3">
+                @if (clientData) {
+                <div class="mat-elevation-z2">
+                    <p>Kontakt</p>
+                    <ul class="templatemo_list">
+                        <li>telefon: {{clientData.phone}}</li>
+                        <li>email: {{clientData.email}}</li>
+                    </ul>
+                </div>
+                } @if (clientData) {
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Dane klienta </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <app-client-form
+                            [clientDetails]="clientData"
+                            (formChange)="onClientFormChange($event)"
+                            (isFormValid)="onClientFormValid($event)"
+                        >
+                        </app-client-form>
+
+                        <div class="row form-button-section">
+                            <div class="col-lg-12">
+                                <button
+                                    mat-raised-button
+                                    (click)="onSaveClient()"
+                                    [disabled]="!isClientFormValid"
+                                >
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Miary klienta </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <app-client-measures-form
+                            [clientMeasures]="clientMeasures"
+                            (formChange)="onMeasureFormChange($event)"
+                            (isFormValid)="onMeasureFormValid($event)"
+                        >
+                        </app-client-measures-form>
+                        <div class="row form-button-section">
+                            <div class="col-lg-12">
+                                <button
+                                    mat-raised-button
+                                    (click)="onSaveMeasures()"
+                                    [disabled]="!isMeasuresFormValid"
+                                >
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Kalendarz </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <!-- (formChange)="onEventFormChange($event)" -->
+                        <app-client-events-form
+                            [clientEvents]="clientLastEvent"
+                            (isFormValid)="onEventFormValid($event)"
+                        ></app-client-events-form>
+                        <div class="row button-section">
+                            <div class="col-lg-12">
+                                <button
+                                    mat-raised-button
+                                    (click)="saveEvents()"
+                                    [disabled]="!isEventsFormValid"
+                                >
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                }
+                <!-- <accordion [isAnimated]="true"> -->
+                <!-- <accordion-group heading="Dane klienta"> -->
+
+                <!-- <app-client-form
+                            [clientDetails]="clientData"
+                            (formChange)="onClientFormChange($event)"
+                            (isFormValid)="onClientFormValid($event)"
+                        >
+                        </app-client-form>
+
+                        <div class="row form-button-section">
+                            <div class="col-lg-12">
+                                <button mat-raised-button  (click)="onSaveClient()" [disabled]="!isClientFormValid">
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </accordion-group> -->
+
+                <!-- <accordion-group heading="Miary klienta">
+                        <app-client-measures-form
+                            [clientMeasures]="clientMeasures"
+                            (formChange)="onMeasureFormChange($event)"
+                            (isFormValid)="onMeasureFormValid($event)"
+                        >
+                        </app-client-measures-form>
+                        <div class="row form-button-section">
+                            <div class="col-lg-12">
+                                <button mat-raised-button  (click)="onSaveMeasures()" [disabled]="!isMeasuresFormValid">
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </accordion-group> -->
+                <!-- 
+                    <accordion-group heading="Kalendarz">
+                        <app-client-events-form
+                            [clientEvents]="clientLastEvent"
+                            (formChange)="onEventFormChange($event)"
+                            (isFormValid)="onEventFormValid($event)"
+                        ></app-client-events-form>
+                        <div class="row form-button-section">
+                            <div class="col-lg-12">
+                                <button mat-raised-button  (click)="saveEvents()" [disabled]="!isEventsFormValid">
+                                    Zapisz
+                                </button>
+                            </div>
+                        </div>
+                    </accordion-group> -->
+            </div>
+        </div>
+    </div>
+</div>
