@@ -1,0 +1,2 @@
+<app-table-header [title]="tableTitle" [noadd]="false" (filterData)="onFilterData($event)"></app-table-header>
+<app-assorts-table [tableData]="newTableData$ | async"></app-assorts-table>

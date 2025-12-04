@@ -1,0 +1,7 @@
+<app-table-header [title]="tableTitle" [noadd]="false" (addNewItem)="onAddNew()" (filterData)="onFilterData($event)"></app-table-header>
+
+<app-lining-table
+    [tableTitle]="tableTitle"
+    [tableData]="filteredTableData$ | async"
+    (openDetailsModal)="showDetails($event)"
+></app-lining-table>

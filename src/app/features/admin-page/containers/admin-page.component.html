@@ -1,0 +1,8 @@
+<app-table-header [title]="tableTitle" [noadd]="false" [isFiltered]="false" (addNewItem)="createNew()"></app-table-header>
+
+<app-users-table
+    [tableTitle]="tableTitle"
+    [tableData]="tableData$ | async"
+    (showDetailsModal)="showDetails($event)"
+    (confirmDeleteModal)="deleteUser($event)"
+></app-users-table>

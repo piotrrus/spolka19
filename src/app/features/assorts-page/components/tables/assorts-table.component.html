@@ -1,0 +1,16 @@
+<div class="table-header">
+    <ngx-datatable
+        class="material striped"
+        rowHeight="auto"
+        [columnMode]="'force'"
+        [rows]="tableData"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [limit]="10"
+        [messages]="noDataMessage"
+    >
+        <ngx-datatable-column name="Nazwa" prop="name">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>

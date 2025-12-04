@@ -1,0 +1,26 @@
+<div class="table-header">
+    <ngx-datatable
+        [columnMode]="'force'"
+        class="material striped"
+        rowHeight="auto"
+        [rows]="tableData"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [limit]="10"
+        [messages]="noDataMessage"
+    >
+        <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+            <ngx-datatable-column name="{{dataTableColumns.name}}" prop="{{dataTableColumns.prop}}" [width]="100">
+                <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                    <ng-container *ngIf="dataTableColumns.link">
+                        <a href="javascript:void(0)" (click)="showDetails(row)" title="pokaż szczegóły"> {{ value }} </a>
+                    </ng-container>
+                    <ng-container *ngIf="dataTableColumns.delete">
+                        <a href="javascript:void(0)" (click)="deleteUser(row)" title="pokaż szczegóły"> usuń </a>
+                    </ng-container>
+                    <ng-container *ngIf="!dataTableColumns.link && !dataTableColumns.delete"> {{ value }} </ng-container>
+                </ng-template>
+            </ngx-datatable-column>
+        </ng-container>
+    </ngx-datatable>
+</div>
