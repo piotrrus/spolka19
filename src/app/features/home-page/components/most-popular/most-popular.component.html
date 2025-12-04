@@ -1,0 +1,27 @@
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="row">
+            <div class="col-sm-12 info">
+                <!-- "mostPopularAssorts.length > 0 ? 'white' : 'grey'" -->
+                <!-- [ngStyle]="getHeaderStyle()" -->
+                <p>Najbardziej popularne</p>
+                <table cellspacing="0" class="home-table">
+                    @if (mostPopularAssorts) {
+                    <tr>
+                        <td width="30%">dodatek:</td>
+                        <td float="right">{{ mostPopularAssorts[0].article }}</td>
+                    </tr>
+                    } @if (mostPopularAssorts) {
+                    <tr>
+                        <td width="30%">materiał:</td>
+                        <td float="right">
+                            {{ mostPopularFabrics![0].materialNr }} {{
+                            mostPopularFabrics![0].contractor }}
+                        </td>
+                    </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

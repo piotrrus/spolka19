@@ -1,0 +1,40 @@
+<!-- <div class="row">
+    <div class="col-sm-10 page-title">
+        Najbliższe wydarzenia
+        @if (dataLength === 0") {
+        <span *ngIf="dataLength === 0"> - brak</span>
+    }
+    </div>
+    <div class="col-sm-2 info"></div>
+</div>
+
+<ngx-datatable
+    [columnMode]="'force'"
+    class="material striped"
+    [rows]="lastEvents"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+    [messages]="noDataMessage"
+>
+    <ngx-datatable-column name="Nr. klienta" prop="client_nr" [width]="100">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a routerLink="/clients/data/{{ row['id_client'] }}" mat-button color="accent" title="pokaż dane klienta"> {{ value }} </a>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Nr. zamówienia" prop="invoice_nr">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a routerLink="/myorder/{{ row['id'] }}" mat-button color="accent" title="pokaż zamówienie"> {{ value }} </a>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Data zamówienia" prop="order_date">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value | date: 'dd-MM-yyyy'}} </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Status" prop="status">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable> -->

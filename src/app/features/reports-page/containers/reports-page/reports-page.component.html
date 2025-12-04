@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-lg-12">
+        <mat-card appearance="outlined">
+            <mat-card-header>
+                <mat-card-title
+                    >Raport - {{reportName}}
+                    <a href="javascript:void(0)" (click)="printReport()" title="wersja do druku" class="print-btn">
+                        <img src="../../../../assets/printer.png" lazy alt="" />
+                    </a>
+                    <ng-container *ngIf="reportData.length > 1">
+                        <mat-card-subtitle>
+                            <p class="light-grey">Znaleziono {{dataLength}} pozycji</p>
+                        </mat-card-subtitle>
+                    </ng-container>
+                </mat-card-title>
+            </mat-card-header>
+        </mat-card>
+
+        <ngx-datatable
+            [columnMode]="'force'"
+            class="material striped"
+            [rows]="reportData"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            rowHeight="auto"
+            [limit]="10"
+        >
+            <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+                <ngx-datatable-column name="{{dataTableColumns.name}}" prop="{{dataTableColumns.prop}}">
+                    <ng-template let-value="value" ngx-datatable-cell-template class="price-cell"> {{value}} </ng-template>
+                </ngx-datatable-column>
+            </ng-container>
+        </ngx-datatable>
+    </div>
+</div>

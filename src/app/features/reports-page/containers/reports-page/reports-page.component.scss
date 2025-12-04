@@ -1,0 +1,19 @@
+@use 'table';
+
+h3 {
+     color: #fff;
+}
+
+.print-btn {
+     padding-bottom: 10px;
+     float: right;
+}
+
+::ng-deep .mat-mdc-card-header-text {
+     width: 100% !important;
+}
+
+::ng-deep .price-cell {
+     background: red;
+     text-align: right;
+}

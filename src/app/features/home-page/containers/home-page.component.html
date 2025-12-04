@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-8">
+        <app-last-orders
+            [lastOrders]="lastOrders$ | async"
+            (clientRedirect)="showClientDetails($event)"
+            (orderRedirect)="showOrderDetails($event)"
+        ></app-last-orders>
+        <!-- <app-last-events [lastEvents]="lastEvents$ | async"></app-last-events> -->
+    </div>
+
+    <div class="col-sm-4">
+        <app-in-production
+            [sentToProduction]="sentToProduction$ | async"
+            (productionOrdersRedirect)="showProductionOrders()"
+        ></app-in-production>
+
+        <app-orders-to-take-summary
+            [ordersToTake]="ordersToTake$ | async"
+            (ordersToTakeRedirect)="showOrdersToTake()"
+        ></app-orders-to-take-summary>
+
+        <app-unsent-orders [unsentOrders]="unsentOrders$ | async" (showUnsentOrders)="showUnsentOrders()"></app-unsent-orders>
+
+        <app-lack-of-assorts [lackOfAssorts]="lackOfAssorts$ | async" (showLackOfAssorts)="showLackOfAssorts()"></app-lack-of-assorts>
+
+        <app-most-popular
+            [mostPopularFabrics]="mostPopularFabrics$ | async"
+            [mostPopularAssorts]="mostPopularAssorts$ | async"
+        ></app-most-popular>
+    </div>
+</div>

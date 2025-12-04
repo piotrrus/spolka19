@@ -1,0 +1,27 @@
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="row">
+            <div class="col-sm-12 info">
+                @if (sentToProduction) {
+                <p>
+                    Zamówienia przesłane na
+                    <!-- <p *ngIf="sentToProduction"> -->
+                    Zamówienia przesłane na
+                    <a
+                        href="javascript:void(0)"
+                        (click)="showOrders()"
+                        mat-button
+                        color="accent"
+                        title="pokaż listę zamówień"
+                    >
+                        produkcję
+                    </a>
+                    <span class="production-count">{{ sentToProduction }} </span>
+                </p>
+                } @if (!sentToProduction) {
+                <p class="right">Brak zamówień przesłanych na produkcję</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

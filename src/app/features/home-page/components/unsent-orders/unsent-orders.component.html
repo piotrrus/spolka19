@@ -1,0 +1,18 @@
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="row">
+            <div class="col-sm-12 info">
+                <div class="home-panel-title">Materiał niezamówiony</div>
+                <div class="home-panel-title right">
+                    <a href="javascript:void(0)" (click)="showMore()" title="Pokaż więcej">więcej </a>
+                </div>
+                <table cellspacing="0" class="home-table" *ngIf="unsentOrders">
+                    <tr *ngFor="let unsent of unsentOrders">
+                        <td width="70%">{{ unsent.contractor }} {{ unsent.material_nr }}</td>
+                        <td width="30%">{{ unsent.order_date | date: "dd-MM-yyyy" }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

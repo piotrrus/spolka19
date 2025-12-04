@@ -1,0 +1,20 @@
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="row">
+            <div class="col-sm-12 info">
+                <div class="home-panel-title">Asortyment na wyczerpaniu</div>
+                <div class="home-panel-title right">
+                    <a href="javascript:void(0)" (click)="showMore()" title="Pokaż więcej">więcej </a>
+                </div>
+
+                <table cellspacing="0" class="home-table">
+                    <tr *ngFor="let assorts of lackOfAssorts">
+                        <td width="70%">{{ assorts.material_nr }}</td>
+                        <td width="30%">{{ assorts.contractor }}</td>
+                        <!-- <td width="20%" class="right">{{ assorts.quantity }}</td> -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

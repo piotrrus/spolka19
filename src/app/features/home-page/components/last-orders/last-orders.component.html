@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-10 page-title">Ostatnie zamówienia</div>
+    <div class="col-sm-2 info"></div>
+</div>
+<div class="table-header">
+    <ngx-datatable
+        [columnMode]="'force'"
+        class="material striped"
+        rowHeight="auto"
+        [rows]="lastOrders"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [limit]="10"
+        [messages]="noDataMessage"
+    >
+        <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+            <ngx-datatable-column
+                name="{{dataTableColumns.name}}"
+                prop="{{dataTableColumns.prop}}"
+                [width]="100"
+            >
+                <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                    @if(dataTableColumns.prop==='client_nr') {
+                    <a
+                        href="javascript:void(0)"
+                        (click)="showClient(row['id_client'])"
+                        title="pokaż szczegóły"
+                    >
+                        {{ value }}
+                    </a>
+                    } @else if(dataTableColumns.prop==='invoice_nr') {
+                    <a
+                        href="javascript:void(0)"
+                        (click)="showOrder(row['id_order'])"
+                        title="pokaż zamówienie"
+                    >
+                        {{ value }}
+                    </a>
+                    } @else if(dataTableColumns.prop==='status') {
+                    <mat-chip-option selected>{{value}}</mat-chip-option>
+                    } @else { {{ value }} }
+                </ng-template>
+                <!--                        [ngClass]="row['id_status']===1 ? 'new-order' : 'col-sm-7 table-title'"  -->
+            </ngx-datatable-column>
+        </ng-container>
+    </ngx-datatable>
+</div>

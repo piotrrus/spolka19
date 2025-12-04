@@ -1,0 +1,7 @@
+<app-table-header [title]="tableTitle" [noadd]="false" (addNewItem)="onAddNew()" (filterData)="onFilterData($event)"></app-table-header>
+
+<app-felts-table
+    [tableTitle]="tableTitle"
+    [tableData]="filteredTableData$ | async"
+    (showDetailsModal)="showDetails($event)"
+></app-felts-table>

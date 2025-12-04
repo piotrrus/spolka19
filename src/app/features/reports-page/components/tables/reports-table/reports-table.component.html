@@ -1,0 +1,39 @@
+<ngx-datatable
+    [columnMode]="'force'"
+    class="material"
+    [rows]="tableData"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+>
+    <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+        <ngx-datatable-column name="{{dataTableColumns.name}}" prop="{{dataTableColumns.prop}}">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{value}} </ng-template>
+        </ngx-datatable-column>
+    </ng-container>
+
+    <!-- <ngx-datatable-column name="Miesiąc" prop="month">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Asortyment" prop="art_name" [width]="100">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Ilość" prop="amount">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Wartość" prop="price">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column> -->
+</ngx-datatable>

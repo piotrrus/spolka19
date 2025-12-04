@@ -1,0 +1,24 @@
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="row">
+            <div class="col-sm-12 info">
+                @if (ordersToTake?.length) {
+                <p>
+                    Do odbioru przygotowane są następujące
+                    <a
+                        href="javascript:void(0)"
+                        (click)="showOrders()"
+                        mat-button
+                        color="accent"
+                        title="pokaż listę zamówień"
+                    >
+                        zamówienia
+                    </a>
+                </p>
+                } @if (!ordersToTake?.length) {
+                <p>Brak zamówień do odbioru.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

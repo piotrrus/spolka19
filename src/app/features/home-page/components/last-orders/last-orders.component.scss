@@ -1,0 +1,12 @@
+h3 {
+     font-family: 'Courier New';
+     font-size: 28px;
+}
+
+::ng-deep .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+     padding: 0.4rem 1.2rem;
+}
+
+.new-order {
+     background-color: rgb(20, 187, 48);
+}
