@@ -1,0 +1,6 @@
+<app-table-header [title]="tableTitle" [noadd]="true" (filterData)="updateFilter($event)"></app-table-header>
+<app-orders-all-table
+    [tableData]="tempTable"
+    (showClientDetailsAction)="navigateToClientDetails($event)"
+    (showOrderDetailsAction)="navigateToOrderDetails($event)"
+></app-orders-all-table>

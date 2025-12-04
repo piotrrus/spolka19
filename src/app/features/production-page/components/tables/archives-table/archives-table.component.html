@@ -1,0 +1,110 @@
+<div *ngIf="tableData">
+    <ngx-datatable
+        [columnMode]="'force'"
+        class="material striped"
+        [rows]="tableData"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [limit]="10"
+    >
+        <ngx-datatable-column name="Nr kl." prop="clientNr">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="showClientMeasures(row['id_client'])"
+                    title="pokaż miary klienta"
+                >
+                    {{ value }}
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Nr prod." prop="prod_order">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="showProductionNr(row['id'])"
+                    title="Edytuj nr produkcyjny"
+                >
+                    {{ value }}
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Asort." prop="clothe_type">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Tkanina" prop="dostawca">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                {{ value }}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Tonacja" prop="tonacja">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Skład" prop="model_name">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Nr.tkan." prop="material_nr">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Podsz." prop="podszewka">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Skier. do prod." prop="data_przek_do_prod">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="showProductionDate(row['id'])"
+                    title="Zmień datę przekazania do produkcji"
+                >
+                    {{ value }}
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Uzupełnij" prop="data_przek_do_prod">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="showProductionFormModal(row['id'])"
+                    title="Uzupełnij dane"
+                >
+                    Uzupełnij
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Opis" prop="id">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="printDescription(row['id'])"
+                    title="Opis produkcyjny"
+                >
+                    Opis produkcyjny
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Edycja" prop="id">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <a
+                    href="javascript:void(0)"
+                    (click)="showProductionForm(row['id'])"
+                    title="Edycja danych"
+                >
+                    Edycja
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>
+<div style="width: 100%; margin-bottom: 20px"></div>

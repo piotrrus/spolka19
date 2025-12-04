@@ -1,0 +1,36 @@
+@use 'table';
+
+.card {
+     background-color: #bc323233;
+}
+
+.card-body {
+     font-size: 20px;
+     color: #ff0000;
+}
+
+.week-title-section {
+     margin-top: 10px;
+     display: flex;
+     font-size: 16px;
+     letter-spacing: 3px;
+}
+
+.week-print {
+     width: 10%;
+     text-align: right;
+}
+
+.week-title {
+     color: #c0c0c0;
+     margin-bottom: 10px;
+     width: 90%;
+}
+
+// ::ng-deep .datatable-body-cell-label {
+//      font-size: 11px;
+// }
+
+// ::ng-deep  .datatable-body-cell-label > .mat-mdc-button {
+//      font-size: 11px;
+// }

@@ -1,0 +1,83 @@
+<div [formGroup]="form.form">
+    <div class="row">
+        <div class="col-sm-8">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Nr produkcyjny</mat-label>
+                <input matInput formControlName="prod_order" placeholder="Nr produkcyjny" />
+            </mat-form-field>
+
+            <!-- if (($id_assort == 2) || ($id_assort == 4) || ($id_assort == 7)) {-->
+            <ng-container *ngIf="hasVest">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Rozmiar kamizelki </mat-label>
+                    <input
+                        matInput
+                        appNumberOnly
+                        formControlName="kamizelka_rozmiar"
+                        placeholder="Rozmiar kamizelki"
+                    />
+                </mat-form-field>
+            </ng-container>
+
+            <ng-container *ngIf="hasSize">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Rozmiar</mat-label>
+                    <input matInput appNumberOnly formControlName="rozmiar" placeholder="Rozmiar" />
+                </mat-form-field>
+            </ng-container>
+
+            <ng-container *ngIf="hasTrousers">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Rozmiar spodni</mat-label>
+                    <input
+                        matInput
+                        formControlName="spodnie_rozmiar"
+                        placeholder="Rozmiar spodni"
+                    />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Zaszewki w tyle</mat-label>
+                    <input
+                        matInput
+                        formControlName="spodnie_zaszewki_w_tyle"
+                        placeholder="Zaszewki w tyle"
+                    />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Zaszewki w przodzie</mat-label>
+                    <input
+                        matInput
+                        formControlName="zaszewki_w_przodzie"
+                        placeholder="Zaszewki w przodzie"
+                    />
+                </mat-form-field>
+            </ng-container>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Nici</mat-label>
+                <input matInput formControlName="nici" placeholder="Nici" />
+            </mat-form-field>
+
+            <ng-container *ngIf="!isCoat">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Obwód pasa</mat-label>
+                    <input
+                        matInput
+                        appNumberOnly
+                        formControlName="obwod_pasa"
+                        placeholder="Obwód pasa"
+                    />
+                </mat-form-field>
+            </ng-container>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-sm-12">
+                <mat-radio-group formControlName="wnetrze">
+                    <mat-radio-button [value]="1">Czarne wnętrze (kolanówka + kieszeniówka)</mat-radio-button>
+                    <mat-radio-button [value]="0">Białe wnętrze (kolanówka + kieszeniówka)</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div> -->
+    </div>
+</div>

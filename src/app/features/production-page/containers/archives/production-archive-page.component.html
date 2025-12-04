@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm-10 page-title">Produkcja - archiwum</div>
+    <div class="col-sm-2 right">
+        <button
+            mat-raised-button
+            (click)="navigateToProduction()"
+            class="btn-table-header"
+            title="pokaż dane produkcyjne"
+        >
+            Produkcja
+        </button>
+    </div>
+</div>
+
+@let archiveData = tableData$ | async;
+
+<div class="table-header">
+    @if(archiveData) {
+    <app-archives-table
+        [tableData]="archiveData"
+        (openClientMeasures)="showClientMeasures($event)"
+        (openProductionNr)="editProductionNr($event)"
+        (openProductionDate)="editProductionDate($event)"
+        (openProductionFormModal)="editProductionData($event)"
+        (openPrintDescription)="printProductionDetails($event)"
+        (navigateToProductionForm)="navigateToProductionForm($event)"
+    ></app-archives-table>
+    } @else () {
+    <app-no-data-msg></app-no-data-msg>
+    }
+</div>

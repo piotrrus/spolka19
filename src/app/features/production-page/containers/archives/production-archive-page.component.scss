@@ -1,0 +1,16 @@
+@use 'variables';
+@use 'table';
+@use 'buttons';
+
+::ng-deep .datatable-header-cell {
+     font-size: 15px;
+}
+
+::ng-deep .datatable-body-cell {
+     // padding: 0.3rem 1rem;
+     padding: 0.2rem 0.2rem;
+}
+
+.mat-button {
+     font-size: 13px;
+}

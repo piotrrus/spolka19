@@ -1,0 +1,15 @@
+export enum PRODUCTION_API_PATHS {
+     PRODUCTION = 'production',
+     PRODUCTION_DETAILS = 'production/show/',
+     ARCHIVES = 'production/archives',
+     PRODUCTION_FORM = 'production/form/',
+     PRODUCTION_PRINT_REPORT = 'production/report/print/',
+     // PRODUCTION_PRINT_DATA = 'production/print/',
+     PRODUCTION_PRINT_BY_WEEK = 'production/print/week/',
+     PRODUCTION_PRINT_DETAILS = 'production/print/details/',
+     PRODUCTION_DESCRIPTION = 'production/description/',
+     AFTER_PRODUCTION = 'production/after/',
+     CHANGE_DATE = 'production/change/date/',
+     CHANGE_NR = 'production/change/nr/',
+     PRODUCTION_UPDATE = 'production/update/',
+}

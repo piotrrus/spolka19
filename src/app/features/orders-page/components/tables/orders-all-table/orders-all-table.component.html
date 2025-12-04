@@ -1,0 +1,47 @@
+<div class="table-header">
+    <ngx-datatable
+        [columnMode]="'force'"
+        class="material striped"
+        [rows]="tableData"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [limit]="10"
+    >
+        <ngx-datatable-column name="Nr. zam." prop="invoiceNr" [width]="50">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a href="javascript:void(0)" (click)="showOrderDetails(row)" title="pokaż szczegóły zamówienia"> {{ value }} </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Nr. klienta" prop="clientNr" [width]="100">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a href="javascript:void(0)" (click)="showClientDetails(row['clientId'])" title="pokaż więcej informacji o kliencie">
+                    {{ value }}
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Lista" prop="lista">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <span [innerHTML]="row['lista']"></span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Data zamówienia" prop="orderDate">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Termin" prop="deliveryDate">
+            <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Status" prop="status">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                {{ value }}
+                <p class="not-paid" *ngIf="row['price']===null">Nie określono ceny</p>
+                <p class="not-paid" *ngIf="row['paid']===null">Nie zapłacono</p>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>

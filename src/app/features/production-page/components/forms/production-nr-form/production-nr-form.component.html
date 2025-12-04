@@ -1,0 +1,16 @@
+<div [formGroup]="form.form">
+    <div class="row">
+        <div class="col-sm-12">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Nr produkcyjny</mat-label>
+                <input matInput formControlName="prod_order" placeholder="xxx/xx" />
+                <mat-error *ngIf="form?.prod_order?.hasError('required') && (form.prod_order?.dirty || form.prod_order?.touched)">
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+                <mat-error *ngIf="form?.prod_order?.hasError('pattern') && (form.prod_order?.dirty || form.prod_order?.touched)">
+                    {{ getErrorMessage('pattern') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+export interface ProductionPrintDataApi {
+     data: ProductionPrintData;
+}
+export interface ProductionPrintData {
+     id: number;
+     id_order: number;
+     prod_order: string;
+     id_assort: number;
+     id_status: number;
+     id_client: number;
+     model: null;
+     marynarka_model: string;
+     material_nr: string;
+     rozmiar: number;
+     fabric_composition: string;
+     probe: string;
+     zaszewki_w_przodzie: string;
+     spodnie_zaszewki_w_tyle: string;
+     kamizelka_rozmiar: string;
+     invoice_nr: string;
+     spodnie_rozmiar: string;
+     marynarka_ilosc_guzikow: number;
+     marynarka_ilosc_rozporkow: number;
+     spodnie_kieszen_boczna: number;
+     nici: string;
+     obwod_pasa: number;
+     wnetrze: string;
+     notices: string;
+     clothe_type: string;
+     is_jacket: boolean;
+     is_trousers: boolean;
+     is_vest: boolean;
+     tonacja: string;
+     contractor: string;
+     lining: string;
+     polpodszewka: string;
+     felt: string;
+     marynarka_amf: string;
+     spodnie_imitacja_zegarowki: string;
+     podtrzymacze: string;
+     spodnie_podtrzymacze: string;
+     spodnie_patka: string;
+     spodnie_podwyzszony_pas: string;
+     spodnie_kieszen: string;
+     spodnie_model: string;
+     kamizelka_model: string;
+     marynarka_kieszen: string;
+     marynarka_wylogi: string;
+     spodnie_sekretna_kieszen: string;
+     client_nr: string;
+     deliveryDate: string;
+     produkcja: number;
+}

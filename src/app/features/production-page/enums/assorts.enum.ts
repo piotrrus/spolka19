@@ -1,0 +1,15 @@
+export enum ASSORTS {
+     SUIT2 = 1,
+     SUIT3 = 2,
+     SMOKING2 = 3,
+     SMOKING3 = 4,
+     TAILCOAT = 5,
+     JACKET = 6,
+     VEST = 7,
+     TROUSERS = 8,
+     SHORTS = 9,
+     COAT = 13,
+     SHIRT = 21,
+     ACCESSORIES = 50,
+     SHOES = 60,
+}

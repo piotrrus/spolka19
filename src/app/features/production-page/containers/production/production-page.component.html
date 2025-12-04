@@ -1,0 +1,174 @@
+<div class="row">
+    <div class="col-sm-10 page-title">{{tableName}}</div>
+    <div class="col-sm-2 right">
+        <button
+            mat-raised-button
+            class="btn-table-header"
+            title="Pokaż dane archiwalne"
+            role="button"
+            tabindex="{0}"
+            (click)="navigateToArchives()"
+        >
+            Archiwum
+        </button>
+    </div>
+</div>
+
+<div class="mat-elevation-z2">
+    <div class="table-header">
+        <div class="week-title-section">
+            <div class="week-title">{{ weekTitles[0] }}</div>
+            <div class="week-print">
+                <button
+                    id="print1"
+                    (click)="printWeekReport(0)"
+                    mat-button
+                    color="white"
+                    role="button"
+                    tabindex="{1}"
+                    [disabled]="!actualWeek || actualWeek.length===0"
+                >
+                    DRUKUJ
+                </button>
+            </div>
+        </div>
+
+        <app-production-table
+            *ngIf="actualWeek && actualWeek?.length"
+            [tableData]="actualWeek"
+            (openProductionDate)="openProductionDate($event)"
+            (openClientMeasures)="openClientMeasures($event)"
+            (navigateToProductionForm)="navigateToProductionForm($event)"
+            (openProductionFormModal)="openProductionFormModal($event)"
+            (openProductionNr)="openProductionNr($event)"
+            (openPrintDescription)="printProductionDescription($event)"
+        ></app-production-table>
+        <div class="no-data" *ngIf="!actualWeek  || actualWeek.length===0">
+            <app-no-data-msg></app-no-data-msg>
+        </div>
+
+        <div class="week-title-section">
+            <div class="week-title">{{ weekTitles[1] }}</div>
+            <div class="week-print">
+                <button
+                    (click)="printWeekReport(1)"
+                    mat-button
+                    color="white"
+                    role="button"
+                    tabindex="{2}"
+                    [disabled]="!weekBefore  || weekBefore.length===0"
+                >
+                    DRUKUJ
+                </button>
+            </div>
+        </div>
+
+        <app-production-table
+            *ngIf="weekBefore && weekBefore?.length"
+            [tableData]="weekBefore"
+            (openProductionDate)="openProductionDate($event)"
+            (openClientMeasures)="openClientMeasures($event)"
+            (navigateToProductionForm)="navigateToProductionForm($event)"
+            (openProductionFormModal)="openProductionFormModal($event)"
+            (openProductionNr)="openProductionNr($event)"
+            (openPrintDescription)="printProductionDescription($event)"
+        ></app-production-table>
+
+        <div class="no-data" *ngIf="!weekBefore  || weekBefore.length===0">
+            <app-no-data-msg></app-no-data-msg>
+        </div>
+
+        <div class="week-title-section">
+            <div class="week-title">{{ weekTitles[2] }}</div>
+            <div class="week-print">
+                <button
+                    (click)="printWeekReport(2)"
+                    mat-button
+                    color="white"
+                    role="button"
+                    tabindex="{4}"
+                    [disabled]="!twoWeeksBefore  || twoWeeksBefore.length===0"
+                >
+                    DRUKUJ
+                </button>
+            </div>
+        </div>
+
+        <app-production-table
+            *ngIf="twoWeeksBefore && twoWeeksBefore?.length"
+            [tableData]="twoWeeksBefore"
+            (openProductionDate)="openProductionDate($event)"
+            (openClientMeasures)="openClientMeasures($event)"
+            (navigateToProductionForm)="navigateToProductionForm($event)"
+            (openProductionFormModal)="openProductionFormModal($event)"
+            (openProductionNr)="openProductionNr($event)"
+            (openPrintDescription)="printProductionDescription($event)"
+        >
+        </app-production-table>
+        <div class="no-data" *ngIf="!twoWeeksBefore  || twoWeeksBefore.length===0">
+            <app-no-data-msg></app-no-data-msg>
+        </div>
+
+        <div class="week-title-section">
+            <div class="week-title">{{ weekTitles[3] }}</div>
+            <div class="week-print">
+                <button
+                    (click)="printWeekReport(3)"
+                    mat-button
+                    color="white"
+                    role="button"
+                    tabindex="{5}"
+                    [disabled]="!threeWeeksBefore   || threeWeeksBefore.length===0"
+                >
+                    DRUKUJ
+                </button>
+            </div>
+        </div>
+
+        <app-production-table
+            *ngIf="threeWeeksBefore&& threeWeeksBefore?.length"
+            [tableData]="threeWeeksBefore"
+            (openProductionDate)="openProductionDate($event)"
+            (openClientMeasures)="openClientMeasures($event)"
+            (navigateToProductionForm)="navigateToProductionForm($event)"
+            (openProductionFormModal)="openProductionFormModal($event)"
+            (openProductionNr)="openProductionNr($event)"
+            (openPrintDescription)="printProductionDescription($event)"
+        >
+        </app-production-table>
+        <div class="no-data" *ngIf="!threeWeeksBefore  || threeWeeksBefore.length">
+            <app-no-data-msg></app-no-data-msg>
+        </div>
+
+        <div class="week-title-section">
+            <div class="week-title">{{ weekTitles[4] }}</div>
+            <div class="week-print">
+                <button
+                    (click)="printWeekReport(4)"
+                    mat-button
+                    color="white"
+                    role="button"
+                    tabindex="{6}"
+                    [disabled]="!fourWeeksBefore || fourWeeksBefore.length===0"
+                >
+                    DRUKUJ
+                </button>
+            </div>
+        </div>
+
+        <app-production-table
+            *ngIf="fourWeeksBefore && fourWeeksBefore.length>0"
+            [tableData]="fourWeeksBefore"
+            (openProductionDate)="openProductionDate($event)"
+            (openClientMeasures)="openClientMeasures($event)"
+            (navigateToProductionForm)="navigateToProductionForm($event)"
+            (openProductionFormModal)="openProductionFormModal($event)"
+            (openProductionNr)="openProductionNr($event)"
+            (openPrintDescription)="printProductionDescription($event)"
+        >
+        </app-production-table>
+        <div class="no-data" *ngIf="!fourWeeksBefore || fourWeeksBefore.length===0">
+            <app-no-data-msg></app-no-data-msg>
+        </div>
+    </div>
+</div>

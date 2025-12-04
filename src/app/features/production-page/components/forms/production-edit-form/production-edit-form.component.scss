@@ -1,0 +1,31 @@
+@use 'variables';
+@use 'forms';
+@use 'buttons';
+
+.mat-form-field {
+     font-size: 20px;
+     color: #fafafa;
+}
+
+.mat-focused .placeholder {
+     color: #00d318;
+}
+
+label .mat-form-field-label {
+     color: #dc3545;
+}
+
+::ng-deep.mat-form-field-placeholder {
+     /*change color of underline*/
+     background-color: #c0c0c0 !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label .mat-form-field {
+     /*change color of label*/
+     color: #fafafa !important;
+}
+
+.article-name {
+     font-size: 16px;
+     margin-bottom: 25px;
+}
