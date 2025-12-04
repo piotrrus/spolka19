@@ -1,0 +1,51 @@
+<div [formGroup]="form.form" class="form">
+    <div class="row">
+        <div class="col col-lg-12">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Nazwa/login</mat-label>
+                <input matInput formControlName="name" placeholder="Nazwa/login" />
+                <mat-error *ngIf="form.name?.hasError('required') && (form.name?.dirty || form.name?.touched)">
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+                <mat-error *ngIf="form.name?.hasError('textValidator') && (form.name?.dirty || form.name?.touched)">
+                    {{ getErrorMessage('lettersOnly') }}
+                </mat-error>
+                <mat-error *ngIf="form.name?.hasError('minlength') && (form.name?.dirty || form.name?.touched)">
+                    {{ getErrorMessage('minlength') }}
+                </mat-error>
+                <mat-error *ngIf="form.name?.hasError('maxlength') &&(form.name?.dirty || form.name?.touched)">
+                    {{ getErrorMessage('maxlength') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-12">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-select placeholder="Role" formControlName="role_id">
+                    <mat-option *ngFor="let role of roles" [value]="role.id"> {{ role.name }} </mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.role_id?.hasError('required') && (form.role_id?.dirty || form.role_id?.touched)">
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-12">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Email" />
+                <mat-error *ngIf="form.email?.hasError('email') && (form.email?.dirty || form.email?.touched)">
+                    {{ getErrorMessage('email') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <mat-checkbox class="form-field-full-width checkbox" formControlName="is_active">Aktywne konto</mat-checkbox>
+        </div>
+    </div>
+</div>

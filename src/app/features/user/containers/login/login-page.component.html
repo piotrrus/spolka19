@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col col-lg-12">
+        <span class="title">SPÓŁKA</span>
+        <h1 class="login-margin">Zaloguj się do aplikacji</h1>
+        <hr class="login-margin" />
+        <h4>lub kontaktuj się z administratorem aplikacji, jeśli nie masz do niej dostępu.</h4>
+    </div>
+</div>
+
+<div class="col col-lg-12">
+    <div class="row mat-elevation-z2 login-form">
+        <div class="row">
+            <div class="col col-lg-12">
+                <p class="login-title">Logowanie</p>
+            </div>
+        </div>
+        <app-login-form
+            (formChange)="onFormChange($event)"
+            (isFormValid)="onFormValid($event)"
+        ></app-login-form>
+
+        <div class="row">
+            <div class="col col-lg-12 login-btn">
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    [disabled]="!isFormValid"
+                    (click)="login()"
+                    (keyup.enter)="login()"
+                >
+                    Zaloguj się
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

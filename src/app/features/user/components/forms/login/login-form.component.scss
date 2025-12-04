@@ -1,0 +1,16 @@
+@use 'variables';
+@use 'buttons';
+@use 'forms';
+
+.mat-card {
+     background: rgba(229, 228, 255, 0.2);
+}
+
+input.mat-input-element {
+     font-size: 25px;
+     caret-color: #fff;
+}
+
+.mat-focused .mat-form-field-label {
+     color: red !important;
+}

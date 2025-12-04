@@ -1,0 +1,32 @@
+<div class="container">
+    <div [formGroup]="form.form">
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <input matInput formControlName="login" placeholder="* Nazwa użytkownika" />
+                    <mat-error
+                        *ngIf="form.login?.hasError('required') &&
+              (form.login?.dirty || form.login?.touched)"
+                    >
+                        {{ getErrorMessage("required") }}
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <input
+                        matInput
+                        formControlName="password"
+                        placeholder="* Hasło"
+                        type="password"
+                    />
+                    <mat-error
+                        *ngIf="form.password?.hasError('required') &&
+              (form.password?.dirty || form?.password?.touched)"
+                    >
+                        {{ getErrorMessage("required") }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
