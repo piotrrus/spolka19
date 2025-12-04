@@ -1,0 +1,144 @@
+<div [formGroup]="form.form">
+    <ng-container *ngIf="orderFabricFormConfig?.isNewOrder">
+        <div class="row">
+            <div class="col col-lg-6">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Nr materiału</mat-label>
+                    <input matInput formControlName="materialNr" placeholder="* Numer materiału" />
+                    <mat-error
+                        *ngIf="form.materialNr?.hasError('required') &&
+                                     (form.materialNr?.dirty || form.materialNr?.touched)"
+                    >
+                        {{ getErrorMessage('required') }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col col-lg-6">
+                <mat-form-field appearance="outline" class="form-field-full-width">
+                    <mat-label>Aktualny kurs EURO</mat-label>
+                    <input matInput formControlName="currency" placeholder="* Aktualny kurs EURO" />
+                </mat-form-field>
+            </div>
+        </div>
+    </ng-container>
+
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Dostawca</mat-label>
+                <mat-select formControlName="contractorId" placeholder="* Wybierz dostawcę">
+                    <mat-option *ngFor="let contractor of contractors" [value]="contractor.id">
+                        {{ contractor.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="form.contractorId?.hasError('required') &&
+                                 (form.contractorId?.dirty || form.contractorId?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena zakupu w €</mat-label>
+                <input
+                    matInput
+                    formControlName="priceEuro"
+                    appNumberWthDots
+                    placeholder="Cena zakupu w €"
+                />
+                <mat-error
+                    *ngIf="form.priceEuro?.hasError('required') &&
+                (form.priceEuro?.dirty || form.priceEuro?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Magazyn</mat-label>
+                <mat-select formControlName="warehouseId" placeholder="* Wybierz magazyn">
+                    <mat-option *ngFor="let warehouse of warehouses" [value]="warehouse.id">
+                        {{ warehouse.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="form.warehouseId?.hasError('required') &&
+                                 (form.warehouseId?.dirty || form.warehouseId?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena zakupu zł</mat-label>
+                <input
+                    matInput
+                    formControlName="buyingPrice"
+                    appNumberWthDots
+                    placeholder="Cena zakupu w zł"
+                />
+                <mat-error
+                    *ngIf="form.buyingPrice?.hasError('required') &&
+                (form.buyingPrice?.dirty || form.buyingPrice?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Tonacja</mat-label>
+                <mat-select placeholder="* Wybierz tonację" formControlName="pattern">
+                    <mat-option *ngFor="let pattern of patterns" [value]="pattern.id">
+                        {{ pattern.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="form.pattern?.hasError('required') &&
+                (form.pattern?.dirty || form.pattern?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Ilość w metrach</mat-label>
+                <input matInput formControlName="quantity" appNumberWthDots placeholder="* Ilość" />
+                <mat-error
+                    *ngIf="form.quantity?.hasError('required') &&
+                                 (form.quantity?.dirty || form.quantity?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Skład materiału</mat-label>
+                <input matInput formControlName="fabricComposition" placeholder="Skład materiału" />
+                <mat-error
+                    *ngIf="form.fabricComposition?.hasError('maxlength') &&
+                                 (form.fabricComposition?.dirty || form.fabricComposition?.touched)"
+                >
+                    {{ getErrorMessage('maxlength') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

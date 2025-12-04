@@ -1,0 +1,29 @@
+<app-table-header
+    [title]="tableTitle$ | async"
+    [noadd]="true"
+    (filterData)="onFilterData($event)"
+></app-table-header>
+
+<app-stock-page-navigation
+    [tableTitle]="tableTitle$ | async"
+    [dataLength]="dataLength"
+    [warehousesList]="warehousesList$ | async"
+    [assortsList]="assortsList$ | async"
+    [optionsList]="optionsList$ | async"
+    (stockNewOrder)="stockNewOrder($event)"
+    (warehouseFormChange)="onWarehouseFormChange($event)"
+    (assortFormChange)="onAssortFormChange($event)"
+    (optionFormChange)="onOptionFormChange($event)"
+>
+</app-stock-page-navigation>
+
+@if(isNotOrderedAssorts===true) {
+<p class="ordered-fabrics">lista materiałów zamówionych, nie dostarczonych jeszcze do magazynu</p>
+}
+
+<app-stock-table
+    [tableData]="filteredTableData$ | async"
+    (moveToStock)="confirmMoveToStock($event)"
+    (contractorDetails)="contractorDetails($event)"
+    (articleDetails)="updatAssortDetails($event)"
+></app-stock-table>

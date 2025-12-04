@@ -1,0 +1,56 @@
+<div [formGroup]="form.form">
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Dostawca</mat-label>
+                <mat-select placeholder="Wybierz dostawcę" formControlName="contractorId">
+                    <mat-option *ngFor="let contractor of contractors" [value]="contractor.id"> {{ contractor.name }} </mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="form.contractorId?.hasError('required') &&
+                                 (form.contractorId?.dirty || form.contractorId?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Model butów</mat-label>
+                <input matInput formControlName="name" placeholder="Model butów" />
+                <mat-error
+                    *ngIf="form.name?.hasError('required') &&
+                                 (form.name?.dirty || form.name?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Rozmiar butów</mat-label>
+                <input matInput formControlName="size" placeholder="Rozmiar butów" />
+                <mat-error
+                    *ngIf="form.size?.hasError('required') &&
+                                 (form.size?.dirty || form.size?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Ilość</mat-label>
+                <input matInput formControlName="quantity" placeholder="Ilość" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena zakupu</mat-label>
+                <input matInput formControlName="buyingPrice" placeholder="Cena zakupu" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena sprzedaży</mat-label>
+                <input matInput formControlName="sellingPrice" placeholder="Cena sprzedaży" />
+            </mat-form-field>
+        </div>
+    </div>
+</div>

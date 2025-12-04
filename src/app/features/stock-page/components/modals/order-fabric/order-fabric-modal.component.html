@@ -1,0 +1,30 @@
+<div class="row modal-header">
+    <div class="col-lg-10">
+        <div class="modal-title" [ngClass]="{'modal-error': !isFormValid}">{{data.title}}</div>
+    </div>
+    <div class="col-lg-2 modal-icon-close">
+        <button type="button" class="close" (click)="onClose()" data-dismiss="modal">
+            &times;
+        </button>
+    </div>
+</div>
+
+<mat-dialog-content class="modal-content">
+    <div class="row modal-details-section">
+        <app-fabric-form
+            [contractors]="contractors"
+            [patterns]="patterns"
+            [orderFabricFormConfig]="orderFabricFormConfig"
+            [plnToEuroActualValue]="plnToEuroActualValue"
+            (formChange)="onFormChange($event)"
+            (isFormValid)="onFormValid($event)"
+        ></app-fabric-form>
+    </div>
+
+    <div class="row modal-button-section">
+        <div class="col-lg-12">
+            <button mat-raised-button (click)="onSave()" [disabled]="!isFormValid">Zapisz</button>
+            <button mat-raised-button class="btn-cancel" (click)="onClose()">Przerwij</button>
+        </div>
+    </div>
+</mat-dialog-content>

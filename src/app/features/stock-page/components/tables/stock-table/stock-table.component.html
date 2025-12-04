@@ -1,0 +1,86 @@
+<ngx-datatable
+    [columnMode]="'force'"
+    class="material striped"
+    [rows]="tableData"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+    [messages]="{emptyMessage: 'Brak danych do wyświetlenia'}"
+>
+    <!-- <ng-container *ngFor="let dataTableColumns of dataTableColumns">
+    <ngx-datatable-column name="{{dataTableColumns.name}}" prop="{{dataTableColumns.prop}}">
+                        <ng-container *ngIf="dataTableColumns.link">
+                    <a href="javascript:void(0)" (click)="showDetails(row)" title="pokaż szczegóły"> {{ value }} </a>
+                </ng-container>
+        <ng-template let-value="value" ngx-datatable-cell-template> {{value}} </ng-template>
+    </ngx-datatable-column>
+</ng-container> -->
+
+    <ngx-datatable-column name="Artykuł" prop="artName" [width]="100">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a
+                href="javascript:void(0)"
+                (click)="openArticleDetails(row)"
+                title="pokaż szczegóły artykułu"
+            >
+                {{ value }}
+            </a>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Dostawca" prop="contractor">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a
+                href="javascript:void(0)"
+                (click)="openContractorDetails(row['contractorId'] )"
+                title="pokaż szczegóły dostawcy"
+            >
+                {{ value }}
+            </a>
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Materiał/Model" prop="article">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ row['model'] }} {{ row['article'] }}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Magazyn" prop="warehouse">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Ilość" prop="quantity">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Cena w €" prop="priceEuro">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Cena zak." prop="buyingPrice">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Cena sprz." prop="sellingPrice">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Dodano" prop="addDate">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a
+                href="javascript:void(0)"
+                (click)="onMoveToStock(row['id'])"
+                title="przekaż do magazynu"
+                >{{ value | date: "yyyy-MM-dd" }}</a
+            >
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Klient'" prop="clientNr">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Zam." prop="invoiceNr">
+        <ng-template let-value="value" ngx-datatable-cell-template> {{ value }} </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>
+<!-- 'Cena w €', 'Cena zak.', 'Cena sprz.', 'Dodano', 'Klient', 'Zam' -->

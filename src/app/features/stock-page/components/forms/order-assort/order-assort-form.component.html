@@ -1,0 +1,71 @@
+<div [formGroup]="form.form">
+    <div class="row">
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Asortyment</mat-label>
+                <mat-select formControlName="assortId" placeholder="Wybierz asortyment">
+                    <mat-option *ngFor="let assort of assorts" [value]="assort.id">
+                        {{ assort.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error
+                    *ngIf="form.assortId?.hasError('required') &&
+                             (form.assortId?.dirty || form.assortId?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Dostawca</mat-label>
+                <mat-select formControlName="contractorId" placeholder="Wybierz dostawcę">
+                    <mat-option *ngFor="let contractor of contractors" [value]="contractor.id">
+                        {{ contractor.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-label>Ilość abc</mat-label>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Ilość</mat-label>
+                <input matInput formControlName="quantity" type="number" placeholder="* Ilość" />
+                <mat-error
+                    *ngIf="form.quantity?.hasError('required') &&
+                             (form.quantity?.dirty || form.quantity?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col col-lg-6">
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena zakupu</mat-label>
+                <input matInput formControlName="buyingPrice" placeholder="Cena zakupu" />
+                <mat-error
+                    *ngIf="form.buyingPrice?.hasError('required') &&
+                         (form.buyingPrice?.dirty || form.buyingPrice?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Cena sprzedaży</mat-label>
+                <input matInput formControlName="sellingPrice" placeholder="Cena sprzedaży" />
+                <mat-error
+                    *ngIf="form.sellingPrice?.hasError('required') &&
+                         (form.sellingPrice?.dirty || form.sellingPrice?.touched)"
+                >
+                    {{ getErrorMessage('required') }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field-full-width">
+                <mat-label>Model/kolor</mat-label>
+                <input matInput formControlName="model" placeholder="Model/kolor" />
+            </mat-form-field>
+        </div>
+    </div>
+</div>

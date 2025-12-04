@@ -1,0 +1,36 @@
+<div class="table-header">
+    <div class="row">
+        <div class="col-5 stock-nav">
+            <div class="row">
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="form-field-full-width">
+                        <mat-select placeholder="Asortyment" (selectionChange)="onAssortChange($event.value)">
+                            <mat-option *ngFor="let assort of assortsList" [value]="assort.id"> {{ assort.name }} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="form-field-full-width">
+                        <mat-select placeholder="Magazyn" (selectionChange)="onWarehouseChange($event.value)">
+                            <mat-option *ngFor="let warehouse of warehousesList" [value]="warehouse.id"> {{ warehouse.name }} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="form-field-full-width">
+                        <mat-select placeholder="Opcje" (selectionChange)="onOptionChange($event.value)">
+                            <mat-option *ngFor="let option of optionsList" [value]="option.id"> {{ option.name }} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7 right">
+            <button mat-stroked-button class="btn-lg" (click)="openNewModal(stockOrderOptions.ORDER_FABRIC)">Zamów materiał</button>
+            <button mat-stroked-button class="btn-lg" (click)="openNewModal(stockOrderOptions.ADD_FABRICS)">Dodaj materiał</button>
+            <button mat-stroked-button class="btn-lg" (click)="openNewModal(stockOrderOptions.ASSORTS)">Dodaj asortyment</button>
+            <button mat-stroked-button class="btn-lg" (click)="openNewModal(stockOrderOptions.SHOES)">Dodaj buty</button>
+        </div>
+    </div>
+</div>
